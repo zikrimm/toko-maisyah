@@ -17,7 +17,7 @@
       <div class="product-catagories-wrapper owl-box-shadow py-3">
         <div class="container">
           <div class="section-heading">
-            <h6 class="ml-1">Product Category 213</h6>
+            <h6 class="ml-1">Product Category</h6>
           </div>
           <div class="product-catagory-wrap owl-carousel owl-theme">
             <div class="row g-3">

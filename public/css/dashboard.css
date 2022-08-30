@@ -1,0 +1,192 @@
+a.user-profile {
+  color: #5e6974;
+}
+
+.navbar-expand .navbar-nav .open .nav-link {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.main-header .open .nav-link {
+  height: auto !important;
+}
+
+.user-profile img {
+  width: 29px !important;
+  height: 29px !important;
+  border-radius: 50% !important;
+  margin-right: 10px !important;
+} 
+
+.card-primary.card-outline {
+  border-top:#fff !important;
+}
+
+.top_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ------------------- */
+
+.teks {
+  font-weight: 900 !important;
+}
+
+.user-panel {
+  overflow: visible;
+}
+
+.dropdown-item:hover {
+  color: black !important;
+}
+
+.dropdown-item:active {
+  color: white !important;
+}
+
+.dark-mode .dropdown-item:hover {
+  color: #fff !important;
+}
+
+.modedark .user-panel .dropdown-item {
+  color: #fff !important;
+}
+
+.dark-mode a:not(.btn):hover {
+  color:#ffff !important;
+}
+
+.label-profile {
+  color:rgb(75 85 99) !important;
+  font-size: .875rem;
+  font-weight: normal !important;
+}
+
+.box-profile{
+  box-shadow: 0 0 #0000,0 0 #0000,0 1px 2px 0 rgb(0 0 0 / .05);
+  background-color:#fff;
+  font-family: 'Inter', sans-serif !important;
+  border-radius: .5rem;
+  border-width: 1px;
+  border-color: #e5e7eb;
+  border-style: solid;
+}
+
+.text-profile{
+  font-family: 'Source Sans Pro' !important;
+}
+
+.border-header-profile{
+  border-bottom-width: 1px;
+  border-bottom-color: #e5e7eb !important;
+  border-bottom: solid;
+  background-color: #f9fafb66;
+}
+
+.text-grey {
+  color:#6b7280;
+  font-size: .75rem;
+  margin-bottom: 0px;
+}
+
+.form-group .input-kotak{
+  border:1px solid #ced4da;
+  border-radius: .25rem; 
+}
+
+.form-group .input-kotak input{
+  border-width: 0;
+}
+
+.form-group .kotak {
+  display: flex;
+  align-items: center;
+  background-color: #e9ecef;
+  padding: .375rem .75rem;
+  border-right: 1px solid #ced4da;
+  font-size: 14px;
+}
+
+.dark-mode .form-group .input-kotak{
+  border-color: #6c757d ;
+}
+
+.dark-mode .form-group .kotak{
+  background-color: unset !important;
+  border-right-color: #6c757d
+}
+
+/* Button Submit Profile */
+.btn-profile{
+  width:auto;
+  border-radius: .5rem !important;
+  background-color: rgb(37 99 235/1) !important ;
+}
+
+.btn-profile:hover{
+  background-color: rgb(59 130 246/1) !important;
+}
+
+@media (min-width: 768px) {
+  .btn-profile {
+    width: 8rem !important;
+  }
+}
+
+.h5-profile{
+  font-size:1.125rem;
+}
+
+.upload{
+  width: 100px;
+  position: relative;
+  margin: auto;
+}
+
+.upload .bulat{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #2d2e2e;
+  width: 32px;
+  height: 32px;
+  line-height: 33px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.upload .bulat input[type="file"]{
+  position: absolute;
+  transform: scale(2);
+  opacity: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button{
+  cursor: pointer;
+}
+
+.dark-mode .box-profile{
+  background-color: #343a40;
+  color:#fff !important;
+  border:0 solid rgba(0,0,0,.125);
+}
+
+.dark-mode .label-profile{
+  color: #fff !important;
+}
+
+.dark-mode .border-header-profile {
+  background-color: #343a40;
+}
+
+.dark-mode .text-grey{
+  color: rgb(237, 233, 233);
+}
+
+@media screen and (min-width:1024px){
+  .text-grey{
+     font-size: .875rem;
+  }
+}

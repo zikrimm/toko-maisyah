@@ -1,0 +1,50 @@
+/* Header */
+.banner {
+    font-family: "Montserrat", sans-serif;
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(../img/arutala.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+/* Text Header */
+.text1-header {
+    font-size: 70px;
+}
+.text2-header {
+    font-size: 50px;
+}
+/* Tombol Header */
+.tombol-header {
+    padding: 10px 20px;
+    width: 20%;
+}
+
+/* Mode Handphone */
+@media only screen and (max-width: 768px) {
+    /* Tombol Header */
+    .tombol-header {
+        width: 50%;
+    }
+    /* Text Header */
+    .text1-header {
+        font-size: 35px;
+    }
+    .text2-header {
+        font-size: 25px;
+    }
+}
+/* Mode Laptop*/
+@media only screen and (min-width: 768px) {
+    /* Tombol Header */
+    .tombol-header {
+        width: 30%;
+    }
+    /* Text Header */
+    .text1-header {
+        font-size: 50px;
+    }
+    .text2-header {
+        font-size: 40px;
+    }
+}

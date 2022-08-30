@@ -1,0 +1,54 @@
+a.user-profile {
+    color: #5e6974;
+}
+
+.navbar-expand .navbar-nav .open .nav-link {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.main-header .open .nav-link {
+    height: auto !important;
+}
+
+.user-profile img {
+    width: 29px !important;
+    height: 29px !important;
+    border-radius: 50% !important;
+    margin-right: 10px !important;
+} 
+
+.card-primary.card-outline {
+    border-top:#fff !important;
+}
+
+.top_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ------------------- */
+
+.teks {
+    font-weight: 900 !important;
+}
+
+.user-panel {
+    overflow: visible;
+}
+
+.dropdown-item:hover {
+    color: black !important;
+}
+
+.dropdown-item:active {
+    color: white !important;
+}
+
+.dark-mode .dropdown-item:hover {
+    color: #fff !important;
+}
+
+.modedark .user-panel .dropdown-item {
+    color: #fff !important;
+}

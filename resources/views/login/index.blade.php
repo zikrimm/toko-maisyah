@@ -102,7 +102,7 @@
                             <div class="col">
                                 <div class="form-check mb-3">
                                     <input type="checkbox" name="remember_me" value="1" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                                    <label class="form-check-label text-tiny" for="exampleCheck1">Remember me</label>
                                 </div>
                             </div>
                             <div class="col-me-auto" >

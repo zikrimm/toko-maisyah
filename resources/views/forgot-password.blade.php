@@ -56,12 +56,12 @@
 
                             <div class="row mt-3">
                                 <div class="col">
-                                    <button type="submit" class="swalDefaultSuccess btn btn-login btn-block">Kirim</button>
+                                    <button type="submit" class="swalDefaultSuccess btn btn-login btn-block text-tiny">Kirim</button>
                                 </div>                   
                             </div>
                             <div class="row mt-3">
                                 <div class="col">
-                                    <a href="/login" class="btn btn-block btn-daftar">Login</a>
+                                    <a href="/login" class="btn btn-block btn-daftar text-tiny">Login</a>
                                 </div>                   
                             </div>
                         </div>

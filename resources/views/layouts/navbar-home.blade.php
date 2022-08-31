@@ -99,12 +99,16 @@
       <li class="suha-dropdown-menu">
         <a href="#"><i class="lni lni-grid-alt"></i>Kategori</a>
         <ul>
-          <li><a href="category/{{ $categories[0]->nama_kategori}}">- Makanan</a></li>
-          <li><a href="category/{{ $categories[1]->nama_kategori}}">- Minuman</a></li>
-          <li><a href="category/{{ $categories[2]->nama_kategori}}">- Fashion</a></li>
-          <li><a href="category/{{ $categories[3]->nama_kategori}}">- Aksesoris Muslimah</a></li>
-          <li><a href="category/{{ $categories[4]->nama_kategori}}">- Herbal</a></li>
-          <li><a href="category/{{ $categories[5]->nama_kategori}}">- Lain-lain</a></li>
+          <li><a href="category/{{ $categories[0]->slug}}">- Aksesoris Muslimah</a></li>
+          <li><a href="category/{{ $categories[1]->slug}}">- Buku</a></li>
+          <li><a href="category/{{ $categories[2]->slug}}">- Fashion Muslim</a></li>
+          <li><a href="category/{{ $categories[3]->slug}}">- Herbal</a></li>
+          <li><a href="category/{{ $categories[4]->slug}}">- Makanan & Minuman</a></li>
+          <li><a href="category/{{ $categories[5]->slug}}">- Pakaian Pria</a></li>
+          <li><a href="category/{{ $categories[6]->slug}}">- Perawatan dan Kecantikan</a></li>
+          <li><a href="category/{{ $categories[7]->slug}}">- Pulsa</a></li>
+          <li><a href="category/{{ $categories[8]->slug}}">- Totebag</a></li>
+          <li><a href="category/{{ $categories[9]->slug}}">- Lain-lain</a></li>
         </ul>
       </li>
       <li>

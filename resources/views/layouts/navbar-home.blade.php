@@ -45,7 +45,23 @@
   <div class="suha-sidenav-wrapper" id="sidenavWrapper">
     <!-- Sidenav Profile-->
     <div class="sidenav-profile">
+      @auth
+      @can('admin')
+        @if(auth()->user()->foto)
+          <div class="user-profile"><img src="{{ asset(auth()->user()->foto) }}" alt=""/></div>
+        @else
+          <div class="user-profile"><img src="{{ asset('assets/dist/img/AdminLTELogo.png') }}" alt=""/></div>
+        @endif
+      @else
+        @if(auth()->user()->foto)
+        <div class="user-profile"><img src="{{ asset(auth()->user()->foto) }}" alt=""/></div>
+        @else
+        <div class="user-profile"><img src="{{ asset('img/user3.png') }}" alt=""/></div>
+        @endif
+      @endcan
+      @else
       <div class="user-profile"><img src="{{ asset("img/bg-img/avatar-1.svg") }}" alt="" /></div>
+      @endauth
       <div class="user-info">
         @auth
         <h6 class="user-name mb-0">{{ auth()->user()->name}}</h6>

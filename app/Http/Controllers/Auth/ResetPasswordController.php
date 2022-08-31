@@ -12,9 +12,10 @@ use Illuminate\Auth\Notifications\ResetPassword;
 
 class ResetPasswordController extends Controller
 {
-    public function index($token){
+    public function index($token, Request $request){
         return view('reset-password',[
-            'token' => $token
+            'token' => $token,
+            'email' => $request->email
         ]);
     }
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Register</title>
+    <title>Maisyah Corporation: Register</title>
     <!-- Icon Website -->
     <link rel="icon" href="{{ asset('img/logo-ldua.png') }}">
     <!-- Google Font: Inter -->
@@ -30,15 +30,15 @@
                 <img class= "mb-3 mt-3" style="width:150px;" src="{{ asset('img/logo-maisyah-white.png') }}" alt="">
             </a>
             <!-- /.login-logo -->
-            <div class="card mb-3 card-outline shadow-md card-primary">
+            <div class="card mb-3 card-outline shadow-md card-primary letter-spacing">
                 <div class="card-header text-center">
-                    <span class="h4 fw-3">Register</span>
+                    <span class="h4 fw-3">Sign up for an account</span>
                 </div>
                 <form action="/register" method="post" id="registerForm">
                     @csrf
                     <div class="card-body ">
                         @if( session()->has('registerGoggleError') )
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <div class="alert alert-danger alert-dismissible fade show text-tiny" role="alert">
                                 {{ session('registerGoggleError') }}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
@@ -46,37 +46,37 @@
                               </div>
                         @endif
                         <div class="form-group">
-                            <label for="name" class="text-weight-500">Nama Lengkap</label>
+                            <label for="name" class="text-weight-500 text-tiny">Nama Lengkap</label>
                             <input type="text" class="form-control  @error('name') is-invalid  @enderror" id="name" value="{{ old('name') }}" name="name">
                             @error('name')
-                            <div class="invalid-feedback">
+                            <div class="invalid-feedback text-tiny">
                                 {{ $message }}
                             </div>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="email" class="text-weight-500">Email</label>
+                            <label for="email" class="text-weight-500 text-tiny">Email</label>
                             <input type="email" class="form-control  @error('email') is-invalid  @enderror" id="email" value="{{ old('email') }}" name="email">
                             @error('email')
-                            <div class="invalid-feedback">
+                            <div class="invalid-feedback text-tiny">
                                 {{ $message }}
                             </div>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="password" class="text-weight-500">Password</label>
+                            <label for="password" class="text-weight-500 text-tiny">Password</label>
                             <input type="password" autocomplete="off" class="form-control  @error('password') is-invalid  @enderror" id="password" name="password">
                             @error('password')
-                            <div class="invalid-feedback">
+                            <div class="invalid-feedback text-tiny">
                                 {{ $message }}
                             </div>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="password_confirmation" class="text-weight-500">Confirm Password</label>
+                            <label for="password_confirmation" class="text-weight-500 text-tiny">Confirm Password</label>
                             <input type="password" autocomplete="off" class="form-control  @error('password_confirmation') is-invalid  @enderror" id="password_confirmation" name="password_confirmation">
                             @error('password_confirmation')
-                            <div class="invalid-feedback">
+                            <div class="invalid-feedback text-tiny">
                                 {{ $message }}
                             </div>
                             @enderror
@@ -85,19 +85,19 @@
                             <div class="col">
                                 <div class="form-check mb-3">
                                     <input required type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">I aggree with <a href="#" class="link-underline">Terms Of Service</a></label>
+                                    <label class="form-check-label text-tiny" for="exampleCheck1">I aggree with <a href="#" class="link-underline">Terms Of Service</a></label>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <button type="submit" class="swalDefaultSuccess btn btn-login btn-block">Daftar</button>
+                                <button type="submit" class="swalDefaultSuccess btn btn-login btn-block text-tiny">Daftar</button>
                             </div>                   
                         </div>
                         <div class="row mt-2">
                             <div class="col ">
                                 <div class="social-log">
-                                    <span >
+                                    <span class="text-tiny">
                                         atau daftar dengan 
                                     </span>
                                 </div>
@@ -105,20 +105,20 @@
                         </div>
                         <div class="row mt-2">
                             <div class="col">
-                                <a href="{{ '/auth/redirect/register'}}"  class="btn shadow-sm  btn-block btn-social-log">
-                                    <img src="img/google.png" width="35" alt="">
+                                <a href="{{ '/auth/redirect/register'}}"  class="btn shadow-sm text-tiny  btn-block btn-social-log">
+                                    <img src="img/google.png" width="30" alt="">
                                      Register with Google
                                 </a>
                             </div>                           
                         </div>
                         <div class="row mt-3">
                             <div class="col">
-                                <p class="text-center">Sudah punya akun?</p>
+                                <p class="text-center text-tiny">Sudah punya akun?</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <a href="/login" class="btn btn-block btn-daftar">Login</a>
+                                <a href="/login" class="btn btn-block btn-daftar text-tiny">Login</a>
                             </div>                   
                         </div>
                     </div>

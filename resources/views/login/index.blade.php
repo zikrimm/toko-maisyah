@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Maisyah Corporation: Log in</title>
     <!-- Icon Website -->
     <link rel="icon" href="{{ asset('img/logo-ldua.png') }}">
 
@@ -29,12 +29,12 @@
 <body class="hold-transition box-login">
     <div class="container d-flex justify-content-center">
         
-        <div class="login-box  ">
+        <div class="login-box">
             <a href="/">
                 <img class= "mb-3" style="width:180px;" src="{{ asset('img/logo-maisyah-white.png') }}" alt="">
             </a>
             <!-- /.login-logo -->
-            <div class="card card-outline shadow-md card-primary">
+            <div class="card card-outline shadow-md card-primary letter-spacing">
                 <div class="card-header text-center">
                     <span class="h4 text-signin">Sign in to your account</span>
                 </div>
@@ -43,7 +43,7 @@
                     <div class="card-body ">
                         <div class="form-group">
                             @if( session()->has('status') )
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <div class="alert alert-success alert-dismissible fade show text-tiny" role="alert">
                                 {{ session('status') }}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
@@ -51,7 +51,7 @@
                               </div>
                             @endif
                             @if( session()->has('success') )
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <div class="alert alert-success alert-dismissible fade show text-tiny" role="alert">
                                 {{ session('success') }}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
@@ -59,7 +59,7 @@
                               </div>
                             @endif
                             @if( session()->has('loginError') )
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <div class="alert alert-danger alert-dismissible fade show text-tiny" role="alert">
                                 Email / Password salah!
                                 <button type="button" class="close ubah-warna-alert" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -67,7 +67,7 @@
                             </div>
                             @endif
                             @if( session()->has('loginGoogleError') )
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <div class="alert alert-danger alert-dismissible fade show text-tiny" role="alert">
                                 {{ session('loginGoogleError') }}
                                 <button type="button" class="close ubah-warna-alert" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -83,7 +83,7 @@
                                 </div>
                             </div>
                             @error('email')
-                                <div class="invalid-feedback">
+                                <div class="invalid-feedback text-tiny">
                                     {{ $message }}
                                 </div>
                             @enderror
@@ -106,18 +106,18 @@
                                 </div>
                             </div>
                             <div class="col-me-auto" >
-                                <a href="/forgot-password" class="link-underline"  >Forgot Password</a>
+                                <a href="/forgot-password" class="link-underline text-tiny"  >Forgot Password</a>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <button  class="swalDefaultSuccess btn btn-login btn-block">Login</button>
+                                <button  class="swalDefaultSuccess btn btn-login btn-block text-tiny">Login</button>
                             </div>                   
                         </div>
                         <div class="row mt-2">
                             <div class="col ">
                                 <div class="social-log">
-                                    <span >
+                                    <span class="text-tiny">
                                         atau login dengan 
                                     </span>
                                 </div>
@@ -125,20 +125,20 @@
                         </div>
                         <div class="row mt-2">
                             <div class="col">
-                                <a href="{{ '/auth/redirect/login'}}"  class="btn shadow-sm  btn-block btn-social-log">
-                                    <img src="img/google.png" width="35" alt="">
+                                <a href="{{ '/auth/redirect/login'}}"  class="btn shadow-sm text-tiny  btn-block btn-social-log">
+                                    <img src="img/google.png" width="30" alt="">
                                      Login with Google
                                 </a>
                             </div>                           
                         </div>
                         <div class="row mt-3">
                             <div class="col">
-                                <p class="text-center">Belum punya akun?</p>
+                                <p class="text-center text-tiny">Belum punya akun?</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <a href="/register" class="btn btn-block btn-daftar">Daftar</a>
+                                <a href="/register" class="btn btn-block btn-daftar text-tiny">Daftar</a>
                             </div>                   
                         </div>
                     </div>

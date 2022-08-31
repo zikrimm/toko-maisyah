@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Maisyah Corporation: Reset Kata Sandi</title>
     <!-- Icon Website -->
     <link rel="icon" href="{{ asset('img/logo-ldua.png') }}">
 
@@ -28,13 +28,13 @@
         <div class="login-box ">
             <a href="/"><img class= "mb-3" style="width:180px;" src="{{ asset('img/logo-maisyah-white.png') }}" alt=""></a>
             <!-- /.login-logo -->
-            <div class="card  shadow-md card-outline card-primary">
+            <div class="card  shadow-md card-outline card-primary letter-spacing">
                 <div class="card-header text-center">
-                    <span class="h4  text-signin">Reset your password</span>
+                    <span class="h4  text-signin">Reset kata sandi Anda</span>
                 </div>
-                <p class="px-4" style="color: rgb(75 85 99/1);">Enter the email address associated with your account and we'll send you a link to reset your password.</p>
+                <p class="px-4 text-tiny" style="color: rgb(75 85 99/1);">Masukkan alamat email yang terkait dengan akun Anda dan kami akan mengirimkan tautan untuk mengatur ulang kata sandi Anda.</p>
                 @if(session()->has('status'))
-                <div class="px-4" style="color:rgb(5 150 105/1);">{{ session('status') }}</div>
+                <div class="px-4 text-tiny" style="color:rgb(5 150 105/1);">{{ session('status') }}</div>
                 @endif
                 <form action="/forgot-password" method="post" id="quickForm">
                     @csrf
@@ -48,7 +48,7 @@
                                     </div>
                                 </div>
                                 @error('email')
-                                    <div class="invalid-feedback">
+                                    <div class="invalid-feedback text-tiny">
                                         {{ $message }}
                                     </div>
                                 @enderror

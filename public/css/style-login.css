@@ -129,11 +129,23 @@ body {
     background-color: #f8fafb;
     transition: .8s;
 }
-/* -------- */
 
-/* untuk index.php */
-@media screen and (max-width: 576px) {
-    .h4 {
-        font-size: 20px !important;
+.text-tiny{
+    font-size: .915rem;
+}
+
+.letter-spacing{
+    letter-spacing: -.025em;
+}
+
+.h4{
+    font-size: 1.125rem !important;
+}
+
+@media (min-width: 1024px) {
+    .h4{
+        font-size: 1.25rem !important;
     }
 }
+
+

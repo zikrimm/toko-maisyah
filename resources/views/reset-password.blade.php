@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Reset Password</title>
+    <title>Maisyah Corporation: Reset Kata Sandi</title>
     <!-- Icon Website -->
     <link rel="icon" href="{{ asset('img/logo-ldua.png') }}">
     <!-- Google Font: Inter -->
@@ -27,40 +27,41 @@
 <body class="hold-transition box-login">
     <div class="container d-flex justify-content-center">
    
-        <div class="login-box  ">
+        <div class="login-box letter-spacing">
             <a href="/"><img class= "mb-3" style="width:150px;" src="{{ asset('img/logo-maisyah-white.png') }}" alt=""></a>
             <!-- /.login-logo -->
-            <div class="card shadow-md card-outline card-primary">
+            <div class="card shadow-md card-outline card-primary letter-spacing">
                 <div class="card-header text-center">
                     <span class="h4 fw-3">Reset Password</span>
                 </div>
+                <p class="px-4 text-tiny" style="margin-bottom: 0;" style="color: rgb(75 85 99/1);">Silakan masukkan kata sandi Anda dengan karakter yang sulit ditebak.</p>
                 <form action="/reset-password" method="post" id="registerForm">
                     @csrf
                     <div class="card-body ">
                         <input type="hidden" name="token" value="{{ $token }}">
                         <div class="form-group">
-                            <label for="email" class="text-weight-500">Email</label>
-                            <input type="email" class="form-control  @error('email') is-invalid  @enderror" id="email" value="{{ old('email') }}" name="email">
+                            <label for="email" class="text-weight-500 text-tiny">Email</label>
+                            <input type="email" readonly class="form-control  @error('email') is-invalid  @enderror" id="email" value="{{ old('email',$email) }}" name="email">
                             @error('email')
-                            <div class="invalid-feedback">
+                            <div class="invalid-feedback text-tiny">
                                 {{ $message }}
                             </div>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="password" class="text-weight-500">Password</label>
+                            <label for="password" class="text-weight-500 text-tiny">Password</label>
                             <input type="password" autocomplete="off" class="form-control  @error('password') is-invalid  @enderror" id="password" name="password">
                             @error('password')
-                            <div class="invalid-feedback">
+                            <div class="invalid-feedback text-tiny">
                                 {{ $message }}
                             </div>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="password_confirmation" class="text-weight-500">Confirm Password</label>
+                            <label for="password_confirmation" class="text-weight-500 text-tiny">Confirm Password</label>
                             <input type="password" autocomplete="off" class="form-control  @error('password_confirmation') is-invalid  @enderror" id="password_confirmation" name="password_confirmation">
                             @error('password_confirmation')
-                            <div class="invalid-feedback">
+                            <div class="invalid-feedback text-tiny">
                                 {{ $message }}
                             </div>
                             @enderror
@@ -68,7 +69,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <button type="submit" class="swalDefaultSuccess btn btn-login btn-block">Kirim</button>
+                                <button type="submit" class="swalDefaultSuccess btn btn-login btn-block text-tiny">Kirim</button>
                             </div>                   
                         </div>
                     </div>

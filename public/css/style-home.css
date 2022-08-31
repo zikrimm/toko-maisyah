@@ -5088,6 +5088,13 @@ a:not([href]):not([class]):hover {
     box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
 }
 
+.slide {
+    font-size: 50px;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 20px;
+  }
+
 
 
 @media only screen and (min-width:100px){

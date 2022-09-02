@@ -28,10 +28,10 @@ class DashboardProductController extends Controller
             return datatables()->of($products)->addColumn('action', function ($product) {
                 $button =
                     '<div class="btn-group btn-group-sm">
-                    <button class="btn btn-primary detail" id="' . $product->id . '" > <i class="far fa-eye"></i></button>
-                    <button class="btn btn-info edit" id="' . $product->id . '" ><i class="fas fa-pencil-alt"></i></button>
-                    <button id="' . $product->id . '" class="hapus btn btn-danger rounded-0"  style="padding: 0.25rem 0.5rem; font-size:.875rem; margin-left: -1px"><i class=" fas fa-trash "></i></button>
-                </div>';
+                        <button class="btn btn-primary detail" id="' . $product->id . '" > <i class="far fa-eye"></i></button>
+                        <button class="btn btn-info edit" id="' . $product->id . '" ><i class="fas fa-pencil-alt"></i></button>
+                        <button id="' . $product->id . '" class="hapus btn btn-danger rounded-0"  style="padding: 0.25rem 0.5rem; font-size:.875rem; margin-left: -1px"><i class=" fas fa-trash "></i></button>
+                    </div>';
                 return $button;
             })->addColumn('gambar_product', function ($product) {
                 $url = asset('storage/' . $product->gambar_product);

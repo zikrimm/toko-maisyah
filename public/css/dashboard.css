@@ -128,11 +128,7 @@ a.user-profile {
   background-color: rgb(59 130 246/1) !important;
 }
 
-@media (min-width: 768px) {
-  .btn-profile {
-    width: 8rem !important;
-  }
-}
+
 
 .h5-profile{
   font-size:1.125rem;
@@ -167,6 +163,10 @@ input[type="file"]::-webkit-file-upload-button{
   cursor: pointer;
 }
 
+.badge{
+  font-size: 75% !important;
+}
+
 .dark-mode .box-profile{
   background-color: #343a40;
   color:#fff !important;
@@ -188,5 +188,24 @@ input[type="file"]::-webkit-file-upload-button{
 @media screen and (min-width:1024px){
   .text-grey{
      font-size: .875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-profile {
+    width: 8rem !important;
+  }
+}
+
+@media (max-width: 480px){
+  h2{
+    font-size: 1.5rem !important;
+  }
+  h3{
+    font-size: 1.4rem !important;
+  }
+
+  h5{
+    font-size: 1rem !important;
   }
 }

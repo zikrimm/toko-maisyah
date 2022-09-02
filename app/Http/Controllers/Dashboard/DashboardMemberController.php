@@ -19,10 +19,10 @@ class DashboardMemberController extends Controller
         $members = Member::all();
         if ($request->ajax()) {
             return datatables()->of($members)->addColumn('action', function ($member) {
-                $button ='<div>
-                <button class="btn btn-info edit showModalEditMember" id="' . $member->id . '" ><i class="fas fa-pencil-alt"></i></button>
-                <button class="hapus btn btn-danger " id="' . $member->id . '" ><i class=" fas fa-trash "></i></button>                    
-                </div>';
+                $button ='<div class="btn-group btn-group-sm">
+                            <button class="btn btn-info edit showModalEditMember" id="' . $member->id . '" ><i class="fas fa-pencil-alt"></i></button>
+                            <button class="hapus btn btn-danger " id="' . $member->id . '" ><i class=" fas fa-trash "></i></button>                    
+                         </div>';
                 return $button;
             })->rawColumns(['action'])->setRowId('id')->make(true);
         }

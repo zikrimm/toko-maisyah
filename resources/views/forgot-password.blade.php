@@ -26,7 +26,7 @@
 <body class="hold-transition box-login">
     <div class="container d-flex justify-content-center" >
         <div class="login-box ">
-            <a href="/"><img class= "mb-3" style="width:180px;" src="{{ asset('img/logo-maisyah-white.png') }}" alt=""></a>
+            <a href="/"><img class= "mb-3" style="width:180px;" id="logo-dark" src="{{ asset('img/logo-maisyah-white.png') }}" alt=""></a>
             <!-- /.login-logo -->
             <div class="card  shadow-md card-outline card-primary letter-spacing">
                 <div class="card-header text-center">
@@ -41,9 +41,9 @@
                     <div class="card-body ">
                         <div class="form-group">
                             <div class="input-group ">
-                                <input type="text" class="form-control form-btn @error('email') is-invalid  @enderror" placeholder="Email" name="email" id="email"value="{{ old('email') }}" autocomplete="off">
+                                <input type="text" class="form-control input-email form-btn @error('email') is-invalid  @enderror" placeholder="Email" name="email" id="email"value="{{ old('email') }}" autocomplete="off">
                                 <div class="input-group-append">
-                                    <div class="input-group-text">
+                                    <div class="input-group-text badge-email">
                                         <span class="fas fa-envelope icon-green"></span>
                                     </div>
                                 </div>
@@ -85,6 +85,26 @@
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
+    {{-- Dark Theme --}}
+    <script src="{{ asset('js/default/dark-mode-switch.js') }}"></script>
+    <script>
+        let logoDark = document.querySelector("#logo-dark");
+        if (localStorage.getItem('theme') == "dark") { 
+          
+          logoDark.setAttribute('src','{{ asset('img/logo-maisyah-dark.png') }}');
+        } 
+        if (localStorage.getItem('theme') == "light") { 
+          logoDark.setAttribute('src','{{ asset('img/logo-maisyah-white.png') }}');
+        }
+  </script>
+  <script>
+    $('.input-email').on("blur",function(){
+        $('.badge-email').removeClass('border-blue');
+    })
+    $('.input-email').on("focus",function(){
+        $('.badge-email').addClass('border-blue');
+    })
+  </script>
 
 </body>
 

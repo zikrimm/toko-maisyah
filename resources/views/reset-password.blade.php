@@ -28,7 +28,7 @@
     <div class="container d-flex justify-content-center">
    
         <div class="login-box letter-spacing">
-            <a href="/"><img class= "mb-3" style="width:150px;" src="{{ asset('img/logo-maisyah-white.png') }}" alt=""></a>
+            <a href="/"><img class= "mb-3" style="width:150px;" id="logo-dark" src="{{ asset('img/logo-maisyah-white.png') }}" alt=""></a>
             <!-- /.login-logo -->
             <div class="card shadow-md card-outline card-primary letter-spacing">
                 <div class="card-header text-center">
@@ -92,6 +92,18 @@
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
+    {{-- Dark Theme --}}
+    <script src="{{ asset('js/default/dark-mode-switch.js') }}"></script>
+    <script>
+        let logoDark = document.querySelector("#logo-dark");
+        if (localStorage.getItem('theme') == "dark") { 
+          
+          logoDark.setAttribute('src','{{ asset('img/logo-maisyah-dark.png') }}');
+        } 
+        if (localStorage.getItem('theme') == "light") { 
+          logoDark.setAttribute('src','{{ asset('img/logo-maisyah-white.png') }}');
+        }
+  </script>
 
 
     @if(session()->has('success'))

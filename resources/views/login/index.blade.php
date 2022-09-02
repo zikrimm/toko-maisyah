@@ -31,7 +31,7 @@
         
         <div class="login-box">
             <a href="/">
-                <img class= "mb-3" style="width:180px;" src="{{ asset('img/logo-maisyah-white.png') }}" alt="">
+                <img class= "mb-3" id="logo-dark" style="width:180px;" src="{{ asset('img/logo-maisyah-white.png') }}" alt="">
             </a>
             <!-- /.login-logo -->
             <div class="card card-outline shadow-md card-primary letter-spacing">
@@ -75,9 +75,9 @@
                             </div>
                             @endif
                             <div class="input-group ">
-                                <input type="text" class="form-control form-btn @error('email') is-invalid  @enderror" placeholder="Email" name="email" id="email" required value="{{ old('email') }}" autocomplete="off">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">
+                                <input type="text" class="form-control input-email form-btn @error('email') is-invalid  @enderror" placeholder="Email" name="email" id="email" required value="{{ old('email') }}" autocomplete="off">
+                                <div class="input-group-append " >
+                                    <div class="input-group-text badge-email" >
                                         <span class="fas fa-user icon-green"></span>
                                     </div>
                                 </div>
@@ -90,9 +90,9 @@
                         </div>
                         <div class="form-group">
                             <div class="input-group  ">
-                                <input type="password" class="form-control form-btn" autocomplete="off" placeholder="Password" name="password" required id="password">
+                                <input type="password" class="form-control input-password form-btn" autocomplete="off" placeholder="Password" name="password" required id="password">
                                 <div class="input-group-append">
-                                    <div class="input-group-text">
+                                    <div class="input-group-text badge-password">
                                         <span class="fas fa-lock icon-green"></span>
                                     </div>
                                 </div>
@@ -161,7 +161,32 @@
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
-
+    {{-- Dark Theme --}}
+    <script src="{{ asset('js/default/dark-mode-switch.js') }}"></script>
+    <script>
+        let logoDark = document.querySelector("#logo-dark");
+        if (localStorage.getItem('theme') == "dark") { 
+          
+          logoDark.setAttribute('src','{{ asset('img/logo-maisyah-dark.png') }}');
+        } 
+        if (localStorage.getItem('theme') == "light") { 
+          logoDark.setAttribute('src','{{ asset('img/logo-maisyah-white.png') }}');
+        }
+  </script>
+  <script>
+    $('.input-email').on("blur",function(){
+        $('.badge-email').removeClass('border-blue');
+    })
+    $('.input-email').on("focus",function(){
+        $('.badge-email').addClass('border-blue');
+    })
+    $('.input-password').on("blur",function(){
+        $('.badge-password').removeClass('border-blue');
+    })
+    $('.input-password').on("focus",function(){
+        $('.badge-password').addClass('border-blue');
+    })
+  </script>
 
 </body>
 

@@ -21,10 +21,10 @@ class DashboardCategoryController extends Controller
         $categories = Category::all();
         if ($request->ajax()) {
             return datatables()->of($categories)->addColumn('action', function ($category) {
-                $button ='<div>
-                <button class="btn btn-info edit showModalEditCategory" id="' . $category->id . '" ><i class="fas fa-pencil-alt"></i></button>
-                <button class="hapus btn btn-danger " id="' . $category->id . '" ><i class=" fas fa-trash "></i></button>                    
-                </div>';
+                $button ='<div class="btn-group btn-group-sm">
+                            <button class="btn btn-info edit showModalEditCategory" id="' . $category->id . '" ><i class="fas fa-pencil-alt"></i></button>
+                            <button class="hapus btn btn-danger " id="' . $category->id . '" ><i class=" fas fa-trash "></i></button>                    
+                          </div>';
                 return $button;
             })->rawColumns(['action'])->setRowId('id')->make(true);
         }

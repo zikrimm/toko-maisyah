@@ -202,6 +202,11 @@ textarea:invalid {
         max-width: 940px;
     }
 
+    .icon-kategori {
+        width:20% !important;
+        margin:auto;
+    }
+
     .flash-coret {
         font-size: 12px !important;
     }
@@ -223,6 +228,12 @@ textarea:invalid {
     .container {
         max-width: 800px;
     }
+
+    .icon-kategori {
+        width:20% !important;
+        margin:auto;
+    }
+
     p {
         font-size: 16px !important;
     }
@@ -244,6 +255,11 @@ textarea:invalid {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .container {
         max-width: 640px;
+    }
+
+    .icon-kategori {
+        width:20% !important;
+        margin:auto;
     }
 
     .flash-sale-index {
@@ -279,6 +295,11 @@ textarea:invalid {
         top: 90% !important;
     }
 
+    .icon-kategori {
+        width:20% !important;
+        margin:auto;
+    }
+
     .flash-sale-index {
         display: block !important;
     }
@@ -311,6 +332,11 @@ textarea:invalid {
     }
     .progress-title-fire-2 {
         top: 91% !important;
+    }
+
+    .icon-kategori{
+        width: 40% !important;
+        margin: auto;
     }
 
     .flash-sale-index {
@@ -5060,10 +5086,7 @@ a:not([href]):not([class]):hover {
     color: #ffff;
 }
 
-.icon-kategori {
-    width:20% !important;
-    margin:auto;
-}
+
 
 .icon-kategori:hover{
     background: none !important;

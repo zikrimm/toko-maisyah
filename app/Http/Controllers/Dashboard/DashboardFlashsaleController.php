@@ -81,14 +81,14 @@ class DashboardFlashsaleController extends Controller
         if ($request->ajax()) {
             return datatables()->of($products)->addColumn('action', function ($product) {
                 if($product->flashsale){
-                    $button ='<div> 
-                    <button class="btn btn-info edit showModalEditFlashSale" id="' . $product->id . '" ><i class="fas fa-pencil-alt"></i></button>
-                    <button class="hapus btn btn-danger " id="' . $product->id . '" ><i class=" fas fa-trash "></i></button>            
-                    </div>';
+                    $button ='<div class="btn-group btn-group-sm"> 
+                                <button class="btn btn-info edit showModalEditFlashSale" id="' . $product->id . '" ><i class="fas fa-pencil-alt"></i></button>
+                                <button class="hapus btn btn-danger " id="' . $product->id . '" ><i class=" fas fa-trash "></i></button>            
+                            </div>';
                 } else {
-                    $button ='<div>
-                    <button class="btn btn-primary create showModalCreateFlashSale" id="' . $product->id . '" ><i class="fas fa-plus"></i></button>            
-                    </div>';
+                    $button ='<div class="btn-group btn-group-sm">
+                                <button class="btn btn-primary create showModalCreateFlashSale" id="' . $product->id . '" ><i class="fas fa-plus"></i></button>            
+                             </div>';
                 }
                 return $button;
             })->addColumn('flashsale',function($product){

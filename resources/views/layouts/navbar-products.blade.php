@@ -2,7 +2,7 @@
 <div class="header-area" style="height:50px;" id="headerArea">
     <div class="container h-100 d-flex align-items-center justify-content-between">
      <!-- Back Button-->
-     <div class="back-button"><a href="{{ url()->previous() }}"><i class="lni lni-arrow-left"></i></a></div>
+     <div class="back-button"><a href="{{ url()->previous() }}"><i class="fa-solid fa-arrow-left-long"></i></a></div>
      <!-- Page Title-->
      <div class="page-heading">
        @if(Request::is(['product','product-list']))
@@ -138,7 +138,7 @@
       
     </ul>
     <!-- Go Back Button-->
-    <div class="go-home-btn" id="goHomeBtn"><i class="lni lni-arrow-left"></i></div>
+    <div class="go-home-btn" id="goHomeBtn"><i class="fa-solid fa-arrow-left-long"></i></div>
   </div>
 
  

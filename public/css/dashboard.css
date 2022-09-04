@@ -209,7 +209,11 @@ input[type="file"]::-webkit-file-upload-button{
     font-size: 1rem !important;
   }
 
-  p {
+  p,button {
+    font-size: 14px !important;
+  }
+
+  .swal2-popup.swal2-toast .swal2-title {
     font-size: 14px !important;
   }
 }

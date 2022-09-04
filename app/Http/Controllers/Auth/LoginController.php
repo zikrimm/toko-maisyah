@@ -61,7 +61,7 @@ class LoginController extends Controller
                 }
             } else {
                 if($user != null){
-                    return redirect('/login')->with('registerGoggleError','Akun sudah digunakan silahkan login!');
+                    return redirect('/login')->with('registerGoogleError','Akun sudah digunakan silahkan login!');
                 }else{
                     $create = User::Create([
                         'email'             => $user_google->getEmail(),

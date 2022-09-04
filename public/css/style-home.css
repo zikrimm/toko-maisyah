@@ -1353,7 +1353,7 @@ textarea:invalid {
 }
 
 .page-heading h6 {
-    color: #747794;
+    color: #020310;
     font-size: 14px;
 }
 
@@ -3304,11 +3304,15 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
 .product-slides .owl-prev,
 .product-slides .owl-next {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
-    background-color: transparent;
+    background-color: #ffffff !important;
     text-align: center;
     line-height: 30px;
+    border-radius: 50%;
     z-index: 10;
     top: 50%;
     margin-top: -15px;
@@ -5116,6 +5120,10 @@ a:not([href]):not([class]):hover {
     text-align: center;
     border: 1px solid black;
     margin-bottom: 20px;
+  }
+
+  [data-theme="dark"] .progress{
+    background-color:rgba(255, 255, 255, 0.15);
   }
 
 

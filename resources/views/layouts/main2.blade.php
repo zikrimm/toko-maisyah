@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no" />
-    <meta name="description" content="Suha - Multipurpose Ecommerce Mobile HTML Template" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="#100DD1" />
 
@@ -12,6 +11,8 @@
     <title>Maisyah Corporation</title>
     <!-- Favicon-->
     <link rel="icon" sizes="32x32" href="{{ asset("img/logo-ldua.png") }}" />
+    {{-- Font Awesome V6 --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Apple Touch Icon-->
     <link rel="apple-touch-icon" href="{{ asset("img/icons/icon-96x96.png") }}" />
     <link rel="apple-touch-icon" sizes="152x152" href="{{ asset("img/icons/icon-152x152.png") }}" />

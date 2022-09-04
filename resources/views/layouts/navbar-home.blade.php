@@ -143,7 +143,7 @@
       
     </ul>
     <!-- Go Back Button-->
-    <div class="go-home-btn" id="goHomeBtn"><i class="lni lni-arrow-left"></i></div>
+    <div class="go-home-btn" id="goHomeBtn"><i class="fa-solid fa-arrow-left-long"></i></div>
   </div>
 
  

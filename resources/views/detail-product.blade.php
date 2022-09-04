@@ -3,13 +3,21 @@
       <!-- Product Slides-->
       <div class="product-slides owl-carousel">
         <!-- Single Hero Slide-->
-        <div class="single-product-slide"><img src="{{asset('storage/'. $product->gambar_detailProduct1)}}" alt=""></div>
+        <div class="single-product-slide">
+          <img src="{{asset('storage/'. $product->gambar_detailProduct1)}}" alt="">
+        </div>
         @if ($product->gambar_detailProduct2 && $product->gambar_detailProduct3)
-          <div class="single-product-slide"><img src="{{asset('storage/'. $product->gambar_detailProduct2)}}" alt=""></div>
-          <div class="single-product-slide"><img src="{{asset('storage/'. $product->gambar_detailProduct3)}}" alt=""></div>
-       @elseif  ($product->gambar_detailProduct2) 
-          <div class="single-product-slide"><img src="{{asset('storage/'. $product->gambar_detailProduct2) }}" alt=""></div>
-         @endif
+          <div class="single-product-slide">
+            <img src="{{asset('storage/'. $product->gambar_detailProduct2)}}" alt="">
+          </div>
+          <div class="single-product-slide">
+            <img src="{{asset('storage/'. $product->gambar_detailProduct3)}}" alt="">
+          </div>
+        @elseif  ($product->gambar_detailProduct2) 
+          <div class="single-product-slide">
+            <img src="{{asset('storage/'. $product->gambar_detailProduct2) }}" alt="">
+          </div>
+        @endif
         
       </div>
       <div class="product-description pb-3">

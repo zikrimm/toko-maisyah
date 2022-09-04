@@ -66,9 +66,9 @@
                                 </button>
                             </div>
                             @endif
-                            @if( session()->has('loginGoogleError') )
+                            @if( session()->has('registerGoogleError') )
                             <div class="alert alert-danger alert-dismissible fade show text-tiny" role="alert">
-                                {{ session('loginGoogleError') }}
+                                {{ session('registerGoogleError') }}
                                 <button type="button" class="close ubah-warna-alert" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>

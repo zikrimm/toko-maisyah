@@ -4,18 +4,18 @@
       <div class="product-slides owl-carousel">
         <!-- Single Hero Slide-->
         <div class="single-product-slide">
-          <img src="{{asset('storage/'. $product->gambar_detailProduct1)}}" alt="">
+          <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct1)}}" alt="">
         </div>
         @if ($product->gambar_detailProduct2 && $product->gambar_detailProduct3)
           <div class="single-product-slide">
-            <img src="{{asset('storage/'. $product->gambar_detailProduct2)}}" alt="">
+            <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct2)}}" alt="">
           </div>
           <div class="single-product-slide">
-            <img src="{{asset('storage/'. $product->gambar_detailProduct3)}}" alt="">
+            <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct3)}}" alt="">
           </div>
         @elseif  ($product->gambar_detailProduct2) 
           <div class="single-product-slide">
-            <img src="{{asset('storage/'. $product->gambar_detailProduct2) }}" alt="">
+            <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct2) }}" alt="">
           </div>
         @endif
         

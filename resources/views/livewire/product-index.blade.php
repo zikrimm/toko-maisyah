@@ -8,10 +8,7 @@
     </div>
   </div> 
 
-  <div class="section-heading d-flex">
-    <div class="mr-auto">
-      <h6 class="ml-1 ">All Products</h6>
-    </div>
+  <div class="section-heading d-flex justify-content-end">
     @if($showProductGrid)
     <div class="layout-options">
       <a wire:click="showProductGrid" class="active" href="#">

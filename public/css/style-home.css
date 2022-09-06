@@ -334,6 +334,12 @@ textarea:invalid {
         top: 91% !important;
     }
 
+    .product-title-meta-data::after{
+        top: -119px !important;
+        width: 120px !important;
+        height: 120px !important;
+    }
+
     .icon-kategori{
         width: 40% !important;
         margin: auto;
@@ -3375,9 +3381,10 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
     position: absolute;
     content: "";
     background-image: url(../img/core-img/curve.png);
-    top: -121px;
-    width: 142px;
-    height: 121px;
+    background-size: cover;
+    top: -139px;
+    width: 140px;
+    height: 140px;
     background-repeat: no-repeat;
     right: 0;
     z-index: auto;
@@ -4689,7 +4696,7 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
 }
 [data-theme="dark"] .accordian-card .accordian-header button.collapsed > span {
     color: #ffffff;
-}
+}[data-theme="dark"] .product-title-meta-data::after
 [data-theme="dark"] .faq-search-form input {
     border-color: transparent;
 }

@@ -1,10 +1,14 @@
 <!-- Header Area-->
 <div class="header-area" style="height:50px;" id="headerArea">
-    <div class="container h-100 d-flex align-items-center justify-content-between">
+    <div class="container position-relative h-100 d-flex align-items-center justify-content-between">
      <!-- Back Button-->
-     <div class="back-button"><a href="{{ url()->previous() }}"><i class="fa-solid fa-arrow-left-long"></i></a></div>
+     <div class="back-button">
+      <a href="{{ url()->previous() }}">
+        <i class="fa-solid fa-arrow-left-long"></i>
+      </a>
+    </div>
      <!-- Page Title-->
-     <div class="page-heading">
+     <div class="page-heading position-absolute" style="left:0;right:0; text-align:center">
        @if(Request::is(['product','product-list']))
        <h6 class="mb-0">All Products</h6>
        @elseif (Request::is(['category*']))
@@ -18,7 +22,7 @@
       @auth
       <div class="dropdown" id="dropbtn1">
         <button class="dropbtn font-weight-light " id="dropbtn"  onclick="dropdownFunction()">
-          Maisyah Corporation
+          {{ auth()->user()->name }}
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="myDropdown">

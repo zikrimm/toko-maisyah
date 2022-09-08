@@ -120,7 +120,7 @@
                 <p class="sale-price">{{ $harga_product }}
                 </p>
                 @endif
-                <div class="product-rating"><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></div><a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="lni lni-plus"></i></a>
+                <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="fa-solid fa-plus"></i></a>
               </div>
             </div>
           </div>
@@ -165,7 +165,7 @@
                 {{ $harga_product }}
                 @endif
               </p>
-              <div class="product-rating"><i class="lni lni-star-filled"></i>4.88 (39)</div><a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="mr-1 lni lni-cart"></i>Buy Now</a>
+              <div class="product-rating"><i class="fa-solid fa-star"></i>4.88 (39)</div><a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="mr-1 lni lni-cart"></i>Buy Now</a>
             </div>
           </div>
         </div>

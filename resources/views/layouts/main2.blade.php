@@ -32,6 +32,8 @@
     <link rel="manifest" href="manifest.json" /> --}}
     {{-- bootstrap icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    {{-- Lightbox2 --}}
+    <link rel="stylesheet" href="{{ asset("/css/lightbox.min.css") }}">
     @livewireStyles
   
   </head>
@@ -66,6 +68,7 @@
     <script src="{{ asset("js/default/dark-mode-switch.js") }}"></script>
     <script src="{{ asset("js/default/active.js") }}"></script>
     <script src="{{ asset("js/pwa.js") }}"></script>
+    <script src="{{ asset("js/lightbox.min.js") }}"></script>
     <script src="https://kit.fontawesome.com/471d5e1a86.js" crossorigin="anonymous"></script>
     @stack('scripts')
     @if(Request::is(['settings','/']))

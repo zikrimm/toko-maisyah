@@ -2,13 +2,13 @@
 <div class="header-area" style="height:50px;" id="headerArea">
     <div class="container position-relative h-100 d-flex align-items-center justify-content-between">
      <!-- Back Button-->
-     <div class="back-button">
+     <div class="back-button" style="z-index: 2">
       <a href="{{ url()->previous() }}">
         <i class="fa-solid fa-arrow-left-long"></i>
       </a>
-    </div>
+     </div>
      <!-- Page Title-->
-     <div class="page-heading position-absolute" style="left:0;right:0; text-align:center">
+     <div class="page-heading position-absolute" style="left:0;right:0; text-align:center;">
        @if(Request::is(['product','product-list']))
        <h6 class="mb-0">All Products</h6>
        @elseif (Request::is(['category*']))
@@ -20,7 +20,7 @@
        @endif
      </div>
       @auth
-      <div class="dropdown" id="dropbtn1">
+      <div class="dropdown" id="dropbtn1" style="z-index: 2">
         <button class="dropbtn font-weight-light " id="dropbtn"  onclick="dropdownFunction()">
           {{ auth()->user()->name }}
           <i class="fa fa-caret-down"></i>
@@ -36,7 +36,7 @@
         </div>
       </div> 
       @else
-        <div class="navbar-login">
+        <div class="navbar-login" style="z-index: 2">
           <a href="/login" class="text-dark" id="navbar-login">Login</a>
         </div>
       @endauth
@@ -81,7 +81,7 @@
     <ul class="sidenav-nav pl-0">
       @auth
       <li>
-        <a href="profile.html"><i class="lni lni-user"></i>My Profile</a>
+        <a href="/dashboard/profile"><i class="lni lni-user"></i>My Profile</a>
       </li>
       <li>
         <a href="/dashboard"><i class="lni lni-dashboard"></i>Dashboard</a>

@@ -39,7 +39,7 @@
               <!-- Single Settings-->
               <div class="single-settings d-flex align-items-center justify-content-between">
                 <div class="title"><i class="lni lni-lock"></i><span>Password<span>Updated 2 month ago</span></span></div>
-                <div class="data-content"><a href="change-password.html">Change<i class="lni lni-chevron-right"></i></a></div>
+                <div class="data-content"><a href="#">Change<i class="lni lni-chevron-right"></i></a></div>
               </div>
             </div>
           </div>

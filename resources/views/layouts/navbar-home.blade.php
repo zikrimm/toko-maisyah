@@ -74,7 +74,7 @@
     <ul class="sidenav-nav pl-0">
       @auth
       <li>
-        <a href="profile.html"><i class="lni lni-user"></i>My Profile</a>
+        <a href="/dashboard/profile"><i class="lni lni-user"></i>My Profile</a>
       </li>
       <li>
         <a href="/dashboard"><i class="lni lni-dashboard"></i>Dashboard</a>

@@ -116,16 +116,18 @@
         @if($product->flashsale)
         <!-- Single Flash Sale Card-->
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="card card-hover flash-sale-card">             
+          <div class="card card-hover flash-sale-card" style="height:290px;">             
             <div class="card-body">
               <span class="badge badge-warning">FLASH SALE</span>
               <a class="wishlist-btn" href="#">
                   <i class="lni lni-heart"></i>
                 </a>
               <a href="/product/{{ $product->slug }}">
-                <img src="{{ asset('storage/'.$product->gambar_product) }}" alt="">
+                <div style="height:180px;">
+                  <img style="height: 160px; width:100%; object-fit: cover" src="{{ asset('storage/'.$product->gambar_product) }}" alt="">
+                </div>
                 <span class="product-title">{{ $product->nama_product }}</span>
-                <p class="sale-price color-price-flash">{{ $harga_product }}
+                <p class="sale-price color-price-flash text-truncate">{{ $harga_product }}
                   <span class="real-price color-coret-flash">{{ $harga_coret_product }}</span>
                 </p>
                 <span class="progress-title">{{ $product->sold_out }}% Sold Out</span>
@@ -179,7 +181,7 @@
                   {{ $harga_product }}
                   @endif
                 </p>
-                <div class="product-rating"><i class="lni lni-star-filled"></i>4.88 (39)</div><a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="mr-1 lni lni-cart"></i>Buy Now</a>
+                <div class="product-rating"><i class="fa-solid fa-star"></i>4.88 (39)</div><a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="mr-1 lni lni-cart"></i>Buy Now</a>
               </div>
             </div>
           </div>

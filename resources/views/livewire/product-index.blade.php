@@ -118,7 +118,7 @@
                       {{ $harga_product }}
                       @endif
                     </p>
-                    <div class="product-rating"><i class="lni lni-star-filled"></i>4.88 (39)</div><a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="mr-1 lni lni-cart"></i>Buy Now</a>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i>4.88 (39)</div><a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="mr-1 lni lni-cart"></i>Buy Now</a>
                   </div>
                 </div>
               </div>
@@ -158,14 +158,14 @@
                 <a class="product-thumbnail d-block" href="/product/{{ $product->slug }}">
                   <img class="mb-2" style="height: 158px; object-fit: cover" src="{{ asset('storage/'. $product->gambar_product) }}" alt=""></a><a class="product-title d-block" href="/product/{{ $product->slug }}">{{ $product->nama_product }}</a>
                 @if ($product->harga_coret_product)
-                <p class="sale-price">{{ $harga_product }}
+                <p class="sale-price text-truncate">{{ $harga_product }}
                   <span>{{ $harga_coret_product }}</span>
                 </p>
                 @else
-                <p class="sale-price">{{ $harga_product }}
+                <p class="sale-price text-truncate">{{ $harga_product }}
                 </p>
                 @endif
-                <div class="product-rating"><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></div><a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="lni lni-plus"></i></a>
+                <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="fa-solid fa-plus"></i></a>
               </div>
             </div>
           </div>      

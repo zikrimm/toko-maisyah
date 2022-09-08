@@ -157,22 +157,27 @@
             @endphp
             @if($product->flashsale)
             <!-- Single Flash Sale Card-->
-            <div class="card card-hover  flash-sale-card">
+            <div class="card card-hover  flash-sale-card" style="height:200px;">
               <div class="card-body">
-                <span class="badge badge-warning">FLASH SALE</span>
-                <a class="wishlist-btn" href="#"></a>
-                <a href="/product/{{ $product->slug }} ">
-                  <img style="object-fit: cover; width: 500px; " src="{{ asset('storage/'.  $product->gambar_product) }}" alt="" />
-                  <span class="product-title">{{ $product->nama_product }}</span>
-                  <p class="sale-price flash-harga text-truncate">{{ $harga_product }}
-                    <span class="real-price flash-coret">{{ $harga_coret_product }}</span>
-                  </p>
-                  <span class="progress-title" style="font-size: 11px !important;">{{ $product->sold_out }}% Sold Out</span>
-                  <!-- Progress Bar-->
-                  <span class="progress-title-fire"></span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: {{ $product->sold_out }}%" aria-valuenow="{{ $product->sold_out }}" aria-valuemin="0" aria-valuemax="100"></div></div
-                ></a>
+                <div style="height: 100px;">
+                  <span class="badge badge-warning">FLASH SALE</span>
+                  <a class="wishlist-btn" href="#"></a>
+                  <a href="/product/{{ $product->slug }}">
+                    <img style="object-fit: cover;  height: 90px;" src="{{ asset('storage/'.  $product->gambar_product) }}" alt="" />
+                  </a>
+                </div>
+                  <div class="gambar_product_responsive">
+                    <span class="product-title">{{ $product->nama_product }}</span>
+                    <p class="sale-price flash-harga text-truncate">{{ $harga_product }}
+                      <span class="real-price flash-coret">{{ $harga_coret_product }}</span>
+                    </p>
+                    <span class="progress-title" style="font-size: 11px !important;">{{ $product->sold_out }}% Sold Out</span>
+                    <!-- Progress Bar-->
+                    <span class="progress-title-fire"></span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: {{ $product->sold_out }}%" aria-valuenow="{{ $product->sold_out }}" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
               </div>
             </div>
             @endif
@@ -227,8 +232,8 @@
                   @else 
                   <p class="sale-price text-truncate">{{ $harga_product }}</p>
                   @endif
-                  <div class="product-rating"><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></div>
-                  <a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="lni lni-plus"></i></a>
+                  <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                  <a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="fa-solid fa-plus"></i></a>
                 </div>
               </div>
             </div>
@@ -255,7 +260,7 @@
                   <div class="product-description">
                     <a class="product-title d-block" href="single-product.html">Modern Red Sofa</a>
                     <p class="sale-price"><i class="lni lni-dollar"></i>$64<span>$89</span></p>
-                    <div class="product-rating"><i class="lni lni-star-filled"></i>4.88 (39)</div>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i>4.88 (39)</div>
                     <a class="btn btn-success btn-sm add2cart-notify" href="#"><i class="mr-1 lni lni-cart"></i>Buy Now</a>
                   </div>
                 </div>
@@ -271,7 +276,7 @@
                   <div class="product-description">
                     <a class="product-title d-block" href="single-product.html">Office Chair</a>
                     <p class="sale-price"><i class="lni lni-dollar"></i>$100<span>$160</span></p>
-                    <div class="product-rating"><i class="lni lni-star-filled"></i>4.82 (125)</div>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i>4.82 (125)</div>
                     <a class="btn btn-success btn-sm add2cart-notify" href="#"><i class="mr-1 lni lni-cart"></i>Buy Now</a>
                   </div>
                 </div>
@@ -287,7 +292,7 @@
                   <div class="product-description">
                     <a class="product-title d-block" href="single-product.html">Sun Glasses</a>
                     <p class="sale-price"><i class="lni lni-dollar"></i>$24<span>$32</span></p>
-                    <div class="product-rating"><i class="lni lni-star-filled"></i>4.79 (63)</div>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i>4.79 (63)</div>
                     <a class="btn btn-success btn-sm add2cart-notify" href="#"><i class="mr-1 lni lni-cart"></i>Buy Now</a>
                   </div>
                 </div>
@@ -303,7 +308,7 @@
                   <div class="product-description">
                     <a class="product-title d-block" href="single-product.html">Wall Clock</a>
                     <p class="sale-price"><i class="lni lni-dollar"></i>$31<span>$47</span></p>
-                    <div class="product-rating"><i class="lni lni-star-filled"></i>4.99 (7)</div>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i>4.99 (7)</div>
                     <a class="btn btn-success btn-sm add2cart-notify" href="#"><i class="mr-1 lni lni-cart"></i>Buy Now</a>
                   </div>
                 </div>

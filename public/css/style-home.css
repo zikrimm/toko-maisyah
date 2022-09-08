@@ -216,11 +216,11 @@ textarea:invalid {
     }
 
     .progress-title-fire {
-        top: 90% !important;
+        top: 86% !important;
     }
 
     .progress-title-fire-2 {
-        top: 91% !important;
+        top: 88% !important;
     }
 }
 
@@ -245,10 +245,10 @@ textarea:invalid {
     }
 
     .progress-title-fire {
-        top: 90% !important;
+        top: 87% !important;
     }
     .progress-title-fire-2 {
-        top: 91% !important;
+        top: 89% !important;
     }
 }
 
@@ -272,10 +272,10 @@ textarea:invalid {
     
 
     .progress-title-fire {
-        top: 89% !important;
+        top: 86% !important;
     }
     .progress-title-fire-2 {
-        top: 91% !important;
+        top: 88% !important;
     }
 
     .weekly-product-card .product-description .sale-price {
@@ -289,10 +289,10 @@ textarea:invalid {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .progress-title-fire {
-        top: 88% !important;
+        top: 86% !important;
     }
     .progress-title-fire-2 {
-        top: 90% !important;
+        top: 88% !important;
     }
 
     .icon-kategori {
@@ -328,10 +328,10 @@ textarea:invalid {
 
 @media only screen and (min-width: 0px) and (max-width: 480px) {
     .progress-title-fire {
-        top: 89% !important;
+        top: 85% !important;
     }
     .progress-title-fire-2 {
-        top: 91% !important;
+        top: 88% !important;
     }
 
     .product-title-meta-data::after{
@@ -398,6 +398,13 @@ textarea:invalid {
 }
 
 @media only screen and (min-width: 0px) and (max-width: 400px) {
+    .progress-title-fire {
+        top: 85% !important;
+    }
+    .progress-title-fire-2 {
+        top: 88% !important;
+    }
+    
     .section-heading h4 {
         font-size: 4.9vw !important;
     }
@@ -413,10 +420,10 @@ textarea:invalid {
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .progress-title-fire {
-        top: 89% !important;
+        top: 87% !important;
     }
     .progress-title-fire-2 {
-        top: 91% !important;
+        top: 89% !important;
     }
 
     p {
@@ -462,6 +469,10 @@ textarea:invalid {
 
 .bg-gray {
     background-color: #f8f8ff;
+}
+
+[data-theme="dark"] .bg-gray{
+    background-color: #111526 !important; 
 }
 
 .btn,
@@ -2051,6 +2062,7 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
     color: #ffaf00;
 }
 .top-product-card .product-rating i {
+    font-size: 10px;
     margin: 0 1px;
 }
 .top-product-card .btn {
@@ -4679,7 +4691,8 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
 [data-theme="dark"] .cart-form-wrapper.bg-white,
 [data-theme="dark"] .p-specification.bg-white,
 [data-theme="dark"] .rating-and-review-wrapper.bg-white,
-[data-theme="dark"] .ratings-submit-form.bg-white {
+[data-theme="dark"] .ratings-submit-form.bg-white, 
+[data-theme="dark"] .bg-white {
     background-color: #1c233e !important;
 }
 [data-theme="dark"] .p-wishlist-share a {
@@ -5129,9 +5142,10 @@ a:not([href]):not([class]):hover {
     margin-bottom: 20px;
   }
 
-  [data-theme="dark"] .progress{
+[data-theme="dark"] .progress{
     background-color:rgba(255, 255, 255, 0.15);
-  }
+}
+
 
 
 

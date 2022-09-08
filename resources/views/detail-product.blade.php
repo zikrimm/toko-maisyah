@@ -1,23 +1,31 @@
-  @extends('layouts.main2')
+@extends('layouts.main2')
   @section('section')
       <!-- Product Slides-->
       <div class="product-slides owl-carousel">
         <!-- Single Hero Slide-->
         <div class="single-product-slide">
-          <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct1)}}" alt="">
+          <a href="{{asset('storage/'. $product->gambar_detailProduct1)}}" data-lightbox="gambar_detailProduct" data-title="{{ $product->nama_product }}">
+            <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct1)}}" alt="">
+          </a>
         </div>
         @if ($product->gambar_detailProduct2 && $product->gambar_detailProduct3)
           <div class="single-product-slide">
-            <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct2)}}" alt="">
+            <a href="{{asset('storage/'. $product->gambar_detailProduct2)}}" data-lightbox="gambar_detailProduct" data-title="{{ $product->nama_product }}">
+              <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct2)}}" alt="">
+            </a>
           </div>
           <div class="single-product-slide">
-            <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct3)}}" alt="">
+            <a href="{{asset('storage/'. $product->gambar_detailProduct3)}}" data-lightbox="gambar_detailProduct" data-title="{{ $product->nama_product }}">
+              <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct3)}}" alt="">
+            </a>
           </div>
         @elseif  ($product->gambar_detailProduct2) 
           <div class="single-product-slide">
-            <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct2) }}" alt="">
+            <a href="{{asset('storage/'. $product->gambar_detailProduct2) }}" data-lightbox="gambar_detailProduct" data-title="{{ $product->nama_product }}">
+              <img style="object-fit: cover; height: 100%;" src="{{asset('storage/'. $product->gambar_detailProduct2) }}" alt="">
+            </a>
           </div>
-        @endif
+        @endif 
         
       </div>
       <div class="product-description pb-3">
@@ -132,7 +140,9 @@
                 <div class="quantity-button-handler">-</div>
                 <input class="form-control cart-quantity-input" type="text" step="1" name="quantity" value="1">
                 <div class="quantity-button-handler">+</div>
+                <div><span class="pl-3">Tersisa {{ $product->jumlah_product }} buah</span></div>
               </div>
+              
               <button class="btn btn-danger ml-3" name="submit" type="submit">Beli</button>
             </form>
           </div>
@@ -142,6 +152,55 @@
           <div class="container">
             <h6>Deskripsi</h6>
             {!! $product->deskripsi_product !!}
+          </div>
+        </div>
+        <!-- Related Products Slides-->
+        <div class="related-product-wrapper bg-white py-3 mb-3">
+          <div class="container">
+            <div class="section-heading d-flex align-items-center justify-content-between">
+              <h6>Related Products</h6><a class="btn p-0" href="/product">View All</a>
+            </div>
+            <div class="related-product-slide flash-sale-slide owl-carousel" >   
+             
+              @foreach($products as $product)
+              @php
+                $harga_product = 'Rp'. number_format($product->harga_product,0,'','.');
+                $harga_coret_product = 'Rp'. number_format($product->harga_coret_product,0,'','.')
+              @endphp
+              <div class="card bg-gray top-product-card shadow-none">
+                <div class="card-body">
+                  <!-- Badge-->
+                  @if ($product->info_product == "Sale")
+                  <span class="badge badge-success">{{ $product->info_product }}</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a>
+                  @elseif ($product->info_product == "Hot")
+                  <span class="badge badge-warning">{{ $product->info_product }}</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a>
+                  @elseif ($product->info_product == "New")
+                  <span class="badge badge-primary">{{ $product->info_product }}</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a>
+                  @else 
+                  <span class="badge badge-danger">PROMO</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a>
+                  @endif
+                  <!-- Thumbnail -->
+                  <a class="product-thumbnail d-block" href="/product/{{ $product->slug }}">
+                    <img class="mb-2 " style="height: 150px; object-fit: cover"  src="{{asset('storage/'. $product->gambar_product)}}" alt="" />
+                  </a>
+                  <!-- Product Title -->
+                  <a class="product-title d-block text-truncate" style="font-size:16px;" href="/product/{{ $product->slug }}">{{ $product->nama_product }}
+                  <!-- Product Price -->
+                  @if ($product->harga_coret_product)
+                  <p class="sale-price text-truncate " >{{ $harga_product }}<span>{{ $harga_coret_product }}</span></p>
+                  @else 
+                  <p class="text-truncate"  style="color:white; margin-bottom:.5rem;">{{ $harga_product }}</p>
+                  @endif
+                  <!-- Rating -->
+                  <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                  <!-- Add to Cart -->
+                  <a class="btn btn-success btn-sm d-flex justify-content-center align-items-center " href="/product/{{ $product->slug }}">
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </div>
+              </div>
+              @endforeach
+            </div>
           </div>
         </div>
         <!-- Rating & Review Wrapper-->
@@ -216,3 +275,11 @@
     <div class="internet-connection-status" id="internetStatus"></div>
 
 @endsection
+@push('scripts')
+<script>
+  lightbox.option({
+      'maxHeight': 700
+  });
+
+</script>
+@endpush

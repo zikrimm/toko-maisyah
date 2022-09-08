@@ -52,6 +52,7 @@ class ProductController extends Controller
     {
         return view('detail-product', [
             'product' => $product,
+            'products' => product::where('status','active')->limit(7)->get(),
             'categories' => Category::all()
         ]);
     }

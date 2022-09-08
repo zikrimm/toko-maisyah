@@ -187,7 +187,7 @@
                   <a class="product-title d-block text-truncate" style="font-size:16px;" href="/product/{{ $product->slug }}">{{ $product->nama_product }}
                   <!-- Product Price -->
                   @if ($product->harga_coret_product)
-                  <p class="sale-price text-truncate " >{{ $harga_product }}<span>{{ $harga_coret_product }}</span></p>
+                  <p class="sale-price  text-truncate " >{{ $harga_product }}<span>{{ $harga_coret_product }}</span></p>
                   @else 
                   <p class="text-truncate"  style="color:white; margin-bottom:.5rem;">{{ $harga_product }}</p>
                   @endif

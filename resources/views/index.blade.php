@@ -157,13 +157,13 @@
             @endphp
             @if($product->flashsale)
             <!-- Single Flash Sale Card-->
-            <div class="card card-hover  flash-sale-card" style="height:200px;">
+            <div class="card card-hover  flash-sale-card" style="height:220px;">
               <div class="card-body">
-                <div style="height: 100px;">
+                <div style="height: 120px;">
                   <span class="badge badge-warning">FLASH SALE</span>
                   <a class="wishlist-btn" href="#"></a>
                   <a href="/product/{{ $product->slug }}">
-                    <img style="object-fit: cover;  height: 90px;" src="{{ asset('storage/'.  $product->gambar_product) }}" alt="" />
+                    <img style="object-fit: cover;  height: 110px;" src="{{ asset('storage/'.  $product->gambar_product) }}" alt="" />
                   </a>
                 </div>
                   <div class="gambar_product_responsive">

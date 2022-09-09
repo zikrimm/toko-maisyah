@@ -408,12 +408,3 @@
     <!-- Internet Connection Status-->
     <div class="internet-connection-status" id="internetStatus"></div>
 @endsection  
-@push('scripts')
-<script>
-  $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
-      items:1,
-    })
-  });
-</script>
-@endpush

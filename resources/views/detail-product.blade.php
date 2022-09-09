@@ -158,9 +158,9 @@
         <div class="related-product-wrapper bg-white py-3 mb-3">
           <div class="container">
             <div class="section-heading d-flex align-items-center justify-content-between">
-              <h6>Related Products</h6><a class="btn p-0" href="/product">View All</a>
+              <h6>Related Products</h6><a class="btn btn-text p-0" href="/product">View All</a>
             </div>
-            <div class="related-product-slide flash-sale-slide owl-carousel" >   
+            <div class="related-product-slide  owl-carousel" >   
              
               @foreach($products as $product)
               @php
@@ -189,7 +189,7 @@
                   @if ($product->harga_coret_product)
                   <p class="sale-price  text-truncate " >{{ $harga_product }}<span>{{ $harga_coret_product }}</span></p>
                   @else 
-                  <p class="text-truncate"  style="color:white; margin-bottom:.5rem;">{{ $harga_product }}</p>
+                  <p class="text-truncate white-harga-product" style="margin-bottom:.5rem;">{{ $harga_product }}</p>
                   @endif
                   <!-- Rating -->
                   <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
@@ -277,9 +277,30 @@
 @endsection
 @push('scripts')
 <script>
+  // Lightbox Setting
   lightbox.option({
-      'maxHeight': 700
+      'maxHeight': 700,
   });
-
+  // Owl Setting
+  if($.fn.owlCarousel){
+    var relatedProduct = $('.related-product-slide');
+    relatedProduct.owlCarousel({
+      nav:true,
+      responsive:{
+        0:{
+          items:2
+        },
+        480:{
+          items: 3
+        },
+        767:{
+          items: 4
+        },
+        991:{
+          items: 5
+        }
+      }
+  })
+}
 </script>
 @endpush

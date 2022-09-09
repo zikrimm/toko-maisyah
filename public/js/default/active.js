@@ -73,7 +73,9 @@
         var CategoryWrap = $('.product-catagory-wrap');
         CategoryWrap.owlCarousel({
             items:1,
-            margin:10
+            margin:10,
+            loop:true,
+            autoHeight:true
         });
     }
 

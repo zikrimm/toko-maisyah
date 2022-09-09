@@ -412,6 +412,16 @@ textarea:invalid {
         padding: 0.5rem !important;
     }
 
+    .filter-products{
+        width: 90% !important;
+        margin-right: 4px !important;
+    }
+
+    .pagination-grid{
+        width:100% !important;
+        margin-left:8px;
+    }
+
     footer h5 {
         font-size: 18px !important;
     }
@@ -5204,6 +5214,9 @@ a:not([href]):not([class]):hover {
 [data-theme="dark"] .white-harga-product{
     color: #fff;
 }
+
+
+
 
 @media only screen and (min-width:100px){
     .banner-image{

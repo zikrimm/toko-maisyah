@@ -40,8 +40,8 @@
               <i class="lni lni-radio-button"></i>
             </a>
           </div>
-          <div class="mr-1">
-            <select wire:model="FilterProducts" class="form-select form-select-sm">
+          <div class="mr-1 filter-products">
+            <select wire:model="FilterProducts" class="form-select  form-select-sm">
               <option value="DataAlphabet">Alphabet</option>
               <option value="DataUlasan">Ulasan</option>
               <option value="DataTerbaru" selected>Terbaru</option>
@@ -51,7 +51,7 @@
             </select>
           </div>
           <div>
-            <select wire:model="paginationGrid" class="form-select form-select-sm" name="" id="">
+            <select wire:model="paginationGrid" class="form-select pagination-grid form-select-sm" name="" id="">
               <option value="8">8</option>
               <option value="20">20</option>
               <option value="32">32</option>

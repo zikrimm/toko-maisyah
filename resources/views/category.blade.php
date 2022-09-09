@@ -13,7 +13,7 @@
         </div>
       </div>
       <a href="#tes" class="to-top">
-        <i class="bi bi-arrow-up-short"></i>
+        <i class="fa-solid fa-arrow-up"></i>
       </a>
     <!-- Internet Connection Status-->
     <div class="internet-connection-status" id="internetStatus"></div>

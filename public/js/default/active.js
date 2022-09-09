@@ -10,6 +10,17 @@
         });
     });
 
+    // Dropdown Toggle
+    $(document).on('click','#suhaNavbarToggler',function(e){
+        $('.sidenav-black-overlay').addClass('active');
+        $('#sidenavWrapper').addClass('nav-active');
+        e.stopPropagation();
+    });
+    $(document).on('click', 'body', function() {
+            $('.sidenav-black-overlay').removeClass('active');
+            $('#sidenavWrapper').removeClass('nav-active');
+    });
+
     // :: Dropdown Menu
     $(".sidenav-nav").find("li.suha-dropdown-menu").append("<div class='dropdown-trigger-btn'><i class='fa-solid fa-angle-down'></i></div>");
     $(".dropdown-trigger-btn").on('click', function () {

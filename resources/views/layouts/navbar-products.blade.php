@@ -136,7 +136,7 @@
         <a href="/settings"><i class="lni lni-cog"></i>Settings</a>
       </li>
       <li>
-        <a href="/login"><i class="bi bi-box-arrow-in-right"></i>Login</a>
+        <a href="/login"><i class="fa-solid fa-arrow-up"></i>Login</a>
       </li>
       @endauth
       

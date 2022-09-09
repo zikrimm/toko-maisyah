@@ -222,6 +222,10 @@ textarea:invalid {
     .progress-title-fire-2 {
         top: 88% !important;
     }
+
+    .progress-title-fire-3 {
+        top: 65% !important;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -250,6 +254,10 @@ textarea:invalid {
     .progress-title-fire-2 {
         top: 89% !important;
     }
+
+    .progress-title-fire-3 {
+        top: 66% !important;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -277,6 +285,9 @@ textarea:invalid {
     .progress-title-fire-2 {
         top: 88% !important;
     }
+    .progress-title-fire-3 {
+        top: 66% !important;
+    }
 
     .weekly-product-card .product-description .sale-price {
         font-size: 12px !important;
@@ -293,6 +304,9 @@ textarea:invalid {
     }
     .progress-title-fire-2 {
         top: 88% !important;
+    }
+    .progress-title-fire-3 {
+        top: 66% !important;
     }
 
     .icon-kategori {
@@ -332,6 +346,9 @@ textarea:invalid {
     }
     .progress-title-fire-2 {
         top: 88% !important;
+    }
+    .progress-title-fire-3 {
+        top: 66% !important;
     }
 
     .product-title-meta-data::after{
@@ -411,6 +428,9 @@ textarea:invalid {
     }
     .progress-title-fire-2 {
         top: 88% !important;
+    }
+    .progress-title-fire-3 {
+        top: 66% !important;
     }
     
     .section-heading h4 {
@@ -2005,10 +2025,12 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
     text-decoration: line-through;
     margin-bottom: 0.25rem;
 }
-.flash-sale-card .progress {
+.flash-sale-card .progress,
+.weekly-product-card .progress {
     height: 0.25rem;
 }
-.flash-sale-card .progress-title {
+.flash-sale-card .progress-title,
+.weekly-product-card .progress-title {
     color: #747794;
     font-size: 12px;
     display: block;
@@ -4541,6 +4563,9 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
 [data-theme="dark"] .top-product-card .product-title {
     color: #ffffff;
 }
+[data-theme="dark"] .weekly-product-card .progress-title {
+    color: rgba(255, 255, 255, 0.7);
+}
 [data-theme="dark"] .top-product-card:hover .product-title,
 [data-theme="dark"] .top-product-card:focus .product-title {
     color: #ffaf00;
@@ -4557,6 +4582,8 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
 [data-theme="dark"] .weekly-product-card:focus .product-title {
     color: #ffaf00;
 }
+
+
 [data-theme="dark"] .weekly-product-card .product-description .sale-price {
     color: #ffaf00;
 }
@@ -4947,7 +4974,8 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
     font-size: 16px !important;
 }
 
-.progress-title-fire {
+.progress-title-fire,
+.progress-title-fire-2{
     background: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/flashsale/f5233259f90b05efbf3867f564628853.png)
         0 no-repeat;
     background-size: contain;
@@ -4957,12 +4985,13 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
     width: 14px;
     height: 17px;
 }
-.progress-title-fire-2 {
+
+.progress-title-fire-3{
     background: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/flashsale/f5233259f90b05efbf3867f564628853.png)
         0 no-repeat;
     background-size: contain;
     position: absolute;
-    left: 18px;
+    left: 3px;
     top: 197px;
     width: 14px;
     height: 17px;
@@ -5104,13 +5133,13 @@ a:not([href]):not([class]):hover {
 
 .card-hover:hover{
     transform: scale(1.01);
-    box-shadow: 2.5px 4.33px 50px 5px rgb(11 28 42 / 15%);
+    box-shadow: 2.5px 4.33px 10px 1px rgb(11 28 42 / 15%);
     transition: .2s ease-in-out;
 }
 
 [data-theme="dark"] .card-hover:hover{
     transform: scale(1.01);
-    box-shadow: 2.5px 4.33px 50px 5px rgb(141 203 255 / 15%);
+    box-shadow: 2.5px 4.33px 10px 1px rgb(141 203 255 / 15%);
     transition: .2s ease-in-out;
 }
 
@@ -5170,14 +5199,11 @@ a:not([href]):not([class]):hover {
 }
 
 .white-harga-product{
-    color: #fff;
-}
-[data-theme="dark"] .white-harga-product{
     color: #232323;
 }
-
-
-
+[data-theme="dark"] .white-harga-product{
+    color: #fff;
+}
 
 @media only screen and (min-width:100px){
     .banner-image{

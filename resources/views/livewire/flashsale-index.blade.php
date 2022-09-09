@@ -181,7 +181,19 @@
                   {{ $harga_product }}
                   @endif
                 </p>
-                <div class="product-rating"><i class="fa-solid fa-star"></i>4.88 (39)</div><a class="btn btn-success btn-sm " href="/product/{{ $product->slug }}"><i class="mr-1 lni lni-cart"></i>Buy Now</a>
+                <div class="product-rating">
+                  <i class="fa-solid fa-star"></i>
+                  4.88 (39 review)
+                </div>
+                
+                <span class="progress-title">{{ $product->sold_out }}% Sold Out</span>
+                <span class="progress-title-fire-3"></span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <a class="btn btn-success btn-sm mt-3" href="/product/{{ $product->slug }}">
+                  <i class="mr-1 lni lni-cart"></i>Beli Sekarang
+                </a>
               </div>
             </div>
           </div>

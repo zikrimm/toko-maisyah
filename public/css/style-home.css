@@ -5215,6 +5215,94 @@ a:not([href]):not([class]):hover {
     color: #fff;
 }
 
+.table-product{
+    position: relative;
+}
+
+.loading,
+.loading-text {
+    position: relative;
+}
+
+.loading-text::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 12px;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+    z-index: 2;
+}
+.loading-text::after{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid #00b894;
+    border-top-color: transparent!important;
+    z-index: 3;
+    -webkit-animation: loader-spin .8s linear infinite;
+    animation: loader-spin .8s linear infinite;
+}
+
+.loading::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 12px;
+    right: 0;
+    bottom: 0;
+    background: hsla(0,0%,100%,.7);
+    border-radius: 2px;
+    z-index: 2;
+}
+
+[data-theme="dark"] .loading::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 12px;
+    right: 0;
+    bottom: 0;
+    background: hsl(0deg 0% 8% / 70%);
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.loading::after{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid #00b894;
+    border-top-color: transparent!important;
+    z-index: 3;
+    -webkit-animation: loader-spin .8s linear infinite;
+    animation: loader-spin .8s linear infinite;
+}
+
+@keyframes loader-spin{
+    0%{
+        -webkit-transform:translate(-50%,-50%) rotate(0deg);
+        transform:translate(-50%,-50%) rotate(0deg)
+    }
+    to{
+        -webkit-transform:translate(-50%,-50%) rotate(1turn);transform:translate(-50%,-50%) rotate(1turn)
+    }
+}
+
+.search-result-middle.loading:after {
+    height: 40px;
+    width: 40px;
+    top: calc(50% - 15px);
+}
 
 
 

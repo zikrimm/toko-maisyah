@@ -34,10 +34,14 @@
           <div class="container d-flex justify-content-between">
             <div class="p-title-price">
               <h6 class="mb-1">{{ $product->nama_product }}</h6>
+              @php
+              $harga_product = 'Rp'. number_format($product->harga_product,0,'','.');
+              $harga_coret_product = 'Rp'. number_format($product->harga_coret_product,0,'','.')
+              @endphp
               @if ($product->harga_coret_product)
-              <p class="sale-price mb-0">Rp{{ $product->harga_product }}<span>Rp{{ $product->harga_coret_product }}</span></p>
+              <p class="sale-price mb-0">{{ $harga_product }}<span>{{ $harga_coret_product }}</span></p>
               @else
-              <p class="sale-price mb-0">Rp{{ $product->harga_product }}</p>
+              <p class="sale-price mb-0">{{ $harga_product }}</p>
               @endif
             </div>
             <div class="p-wishlist-share"><a href="wishlist-grid.html"><i class="lni lni-heart"></i></a></div>

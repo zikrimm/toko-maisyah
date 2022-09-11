@@ -1819,13 +1819,16 @@ textarea:invalid {
     color: rgb(42 51 64/1);
 }
 
-
 .dropdown-content .hr{
-    background-image:linear-gradient(to right,#374151,rgb(55 65 81/0));
+    background-image:linear-gradient(to right,#e5e7eb,rgb(229 231 235 / 0));
     height: 1px;
     width: 100%;
     margin-top: .5rem;
     margin-bottom: .5rem;
+}
+
+[data-theme="dark"] .dropdown-content .hr{
+    background-image:linear-gradient(to right,#374151,rgb(55 65 81/0));
 }
 
 

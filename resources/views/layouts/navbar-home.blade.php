@@ -14,15 +14,35 @@
       </div>
       @auth
       <div class="dropdown" id="dropbtn1">
-        <button class="dropbtn font-weight-light " id="dropbtn"  onclick="dropdownFunction()">
-          {{ auth()->user()->name }}
-          <i class="fa fa-caret-down"></i>
+        <button class="dropbtn font-weight-light"  id="dropbtn"  onclick="dropdownFunction()">
+          <div class="d-block align-items-center item text-truncate">
+            {{ auth()->user()->name }}
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="svg-dropdown h-3.5 w-3.5 transition-transform duration-300" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
         </button>
         <div class="dropdown-content" id="myDropdown">
-          <a href="/dashboard" id="text-dashboard">Dashboard</a>
+          <a href="/dashboard" id="text-dashboard">
+            <i class="fas fa-tachometer-alt"></i>
+            Dashboard
+          </a>
+          <a href="/dashboard/profile" id="text-dashboard">
+            <i class="fas fa-user"></i>
+            Profile
+          </a>
+          <a href="/settings" id="text-dashboard">
+            <i class="fas fa-cog"></i>
+            Settings
+          </a>
+          <div class="hr">
+
+          </div>
           <form action="/logout" method="post">
             @csrf
-            <button type="submit" class="dropdown-item">       
+            <button type="submit" class="dropdown-item">  
+              <i class="fas fa-sign-out-alt"></i>     
               Logout
             </button>
           </form>

@@ -226,6 +226,10 @@ textarea:invalid {
     .progress-title-fire-3 {
         top: 65% !important;
     }
+    
+    .dropdown .dropbtn .item{
+        width: 140px;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -296,6 +300,7 @@ textarea:invalid {
     .product-description .sale-price span {
         font-size: 10px !important;
     }
+
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -337,6 +342,10 @@ textarea:invalid {
 
     .flash-sale {
         font-size: 21px !important;
+    }
+
+    .dropdown .dropbtn .item{
+        width: 100px;
     }
 }
 
@@ -1290,12 +1299,12 @@ textarea:invalid {
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .top-search-form form .form-control {
         max-width: 240px;
+        width: auto;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .top-search-form form .form-control {
         max-width: 280px;
-        width: 280px;
     }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1636,21 +1645,31 @@ textarea:invalid {
     float: left;
 }
 
-.dropdown-item {
-    padding: 12px 16px;
+
+.dropdown .dropbtn .item{
+    column-gap: .5rem;
 }
 
-.dropdown-item:hover {
-    background-color: #ddd;
+
+[data-theme="dark"] .dropdown-item:hover > i{
+    color:#fff !important;
 }
 
-.dropdown-item:focus {
-    background-color: #ddd;
-    color: black;
-    outline: none;
+[data-theme="dark"] .dropdown-item:hover {
+    color:#fff !important;
 }
 
-.dropdown .dropbtn {
+.dropdown-item:hover > i{
+    background-color: transparent !important;
+    color: #00B894;
+}
+
+.dropdown-item:hover{
+    background-color: transparent !important;
+    color:#00B894;
+}
+
+/* .dropdown .dropbtn {
     cursor: pointer;
     font-size: 16px;
     border: none;
@@ -1659,6 +1678,28 @@ textarea:invalid {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+} */
+
+.dropbtn{
+    display: inline-flex;
+    height: 2.5rem;
+    color:rgb(0, 0, 0);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 14.64px !important;
+    background-color: #F9FAFB;
+    transition-duration: .3s;
+    border: 1px solid rgb(209 213 219);
+    border-radius: .5rem;
+    box-shadow: 0 0 #0000 , 0 0 #0000 , 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);
+    column-gap: .5rem;
+}
+
+.dropbtn:hover{
+    background-color:rgb(229 231 235/1);
+    border-color: rgb(209 213 219/1);
 }
 
 .btn-sidebar {
@@ -1694,27 +1735,99 @@ textarea:invalid {
     font-weight: 700;
 }
 
+[data-theme="dark"] .dropdown-content{
+    background-color: #1F2937;
+    border-color: rgb(55 65 81 / 1);
+}
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    background-color: #fff;
+    width: 16rem;
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    border: 1px solid rgb(229 231 235/1) ;
+    border-radius: .5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    margin-top: .25rem;
+    z-index: 250;
+    top:100%;
+    right:0px;
+}
+
+[data-theme="dark"] .dropdown-content a{
+    color: #D1D5DB;
+}
+
+[data-theme="dark"] .dropdown-content a:hover > i{
+    color: #ffff !important;
+}
+
+[data-theme="dark"] .dropdown-content a:hover{
+    color: #ffff !important;
 }
 
 .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+    letter-spacing:-.025em;
+    font-size:.875rem;
+    padding-top: .375rem;
+    padding-bottom: .375rem;
+    color: #4B5563;
+    text-decoration: inherit;
+    display: flex;
+    align-items: center;
+    column-gap: .375rem;
+}   
+
+.dropdown-content a:hover > i{
+    color: #00B894;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+.dropdown-content a:hover{
+    color: #00B894;
 }
+
+
+.dropdown-content button{
+    display: flex;
+    align-items: center;
+    padding-top: .375rem !important;
+    padding-bottom: .375rem !important;
+    letter-spacing:-.025em;
+    margin:0;
+    padding: 0;
+    font-size:.875rem;
+    column-gap: .375rem;
+}
+
+[data-theme="dark"] .dropdown-content i{
+    color: rgb(209 213 219/1); 
+}
+
+.dropdown-content i{
+    display:flex;
+    align-items: center;
+    font-size: 14px;
+    width: 1rem; 
+    height: 1rem; 
+    color: rgb(42 51 64/1);
+}
+
+
+.dropdown-content .hr{
+    background-image:linear-gradient(to right,#374151,rgb(55 65 81/0));
+    height: 1px;
+    width: 100%;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
 
 .show {
     display: block;
@@ -4458,8 +4571,23 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
     color: #fff !important;
 }
 
-[data-theme="dark"] #text-dashboard {
-    color: #212529 !important;
+[data-theme="dark"] #dropbtn{
+    background-color: #1f2937;
+    border: 1px solid rgb(55 65 81 / 1);
+    box-shadow: 0 0 #0000 , 0 0 #0000 , 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);
+}
+
+[data-theme="dark"] #dropbtn:hover{
+    background-color:rgb(55 65 81/1);
+    border-color: rgb(75 85 99 /1);
+}
+
+[data-theme="dark"] #myDropdown a{
+    color: #d1d5db;
+}
+
+[data-theme="dark"] #myDropdown button{
+    color: #d1d5db;
 }
 
 #previewPage[data-theme="dark"] {
@@ -5311,6 +5439,26 @@ a:not([href]):not([class]):hover {
     height: 40px;
     width: 40px;
     top: calc(50% - 15px);
+}
+
+.svg-dropdown{
+    width: .875rem;
+    height: .875rem;
+    display: block;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: .3s;
+}
+
+.rotate-180{
+    --tw-rotate: 180deg;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 

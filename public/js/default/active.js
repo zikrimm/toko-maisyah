@@ -10,21 +10,30 @@
         });
     });
 
+    // Dropdown Desktop
+    $(document).on('click','#dropbtn1',function(e){
+        $('.svg-dropdown').toggleClass('rotate-180');
+    });
+
     // Dropdown Toggle
     $(document).on('click','#suhaNavbarToggler',function(e){
         $('.sidenav-black-overlay').toggleClass('active');
         $('#sidenavWrapper').toggleClass('nav-active');
         e.preventDefault();
         e.stopPropagation();
-
     });
     $(document).on('click', function(e) {
         var sidebar = $("#sidenavWrapper");
+        var dropdown = $('#dropbtn1');
         var exit =  $("#goHomeBtn");
-        console.log(sidebar.has(e.target).length,exit.has(e.target).length );
         if (!sidebar.is(e.target) && sidebar.has(e.target).length === 0 || exit.has(e.target).length == 1) {
             $('.sidenav-black-overlay').removeClass('active');
             $('#sidenavWrapper').removeClass('nav-active');
+        }
+
+        if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
+            $('.svg-dropdown').removeClass('rotate-180');
+            $('#myDropdown').removeClass('show');
         }
     });
 

@@ -37,7 +37,7 @@
                     <label for="nama_lengkap" class="label-profile" >Nama Lengkap</label>
                     <input wire:model="name" type="text" name="name" class="form-control" value="{{ auth()->user()->name }}" id="nama_lengkap" >
                     @error('name')
-                    <span class="text-red">{{ $message }}</span>
+                    <span class="error-validation mt-2">{{ $message }}</span>
                     @enderror
                 </div>
             </div>

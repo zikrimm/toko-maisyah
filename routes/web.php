@@ -15,6 +15,7 @@ use App\Http\Controllers\Dashboard\DashboardMemberController;
 use App\Http\Controllers\Dashboard\DashboardProductController;
 use App\Http\Controllers\Dashboard\DashboardProfileController;
 use App\Http\Controllers\Dashboard\DashboardCategoryController;
+use App\Http\Controllers\Dashboard\DashboardPasswordController;
 use App\Http\Controllers\Dashboard\DashboardFlashsaleController;
 
 
@@ -49,6 +50,7 @@ Route::post('register',[RegisterController::class,'register'])->middleware('gues
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::get('/dashboard/profile', [DashboardProfileController::class, 'index'])->middleware('auth');
+Route::get('/dashboard/password', [DashboardPasswordController::class, 'index'])->middleware('auth');
 Route::resource('/dashboard/anggota', DashboardMemberController::class)->middleware('auth');
 Route::get('/dashboard/anggota/get/{id}',[DashboardMemberController::class,'getMembers'])->middleware('auth');
 Route::get('/dashboard/products/checkSlug', [DashboardProductController::class, 'checkSlug'])->middleware('auth');

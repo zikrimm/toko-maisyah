@@ -17,7 +17,7 @@ class RegisterController extends Controller
             'required'  => 'Field ini tidak boleh kosong!',
             'unique'    => 'Email ini sudah digunakan!',
             'confirm'   => 'Password yang dimasukkan tidak cocok!',
-            'min'       => 'Password harus diisi minimal 6 karakter!',
+            'min'       => 'Password tidak boleh kurang dari 6 karakter!',
             'confirmed' => 'Konfirmasi Password tidak cocok!'
         ];
         $validatedData = $request->validate([

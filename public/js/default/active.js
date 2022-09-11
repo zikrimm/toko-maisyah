@@ -12,13 +12,20 @@
 
     // Dropdown Toggle
     $(document).on('click','#suhaNavbarToggler',function(e){
-        $('.sidenav-black-overlay').addClass('active');
-        $('#sidenavWrapper').addClass('nav-active');
+        $('.sidenav-black-overlay').toggleClass('active');
+        $('#sidenavWrapper').toggleClass('nav-active');
+        e.preventDefault();
         e.stopPropagation();
+
     });
-    $(document).on('click', 'body', function() {
+    $(document).on('click', function(e) {
+        var sidebar = $("#sidenavWrapper");
+        var exit =  $("#goHomeBtn");
+        console.log(sidebar.has(e.target).length,exit.has(e.target).length );
+        if (!sidebar.is(e.target) && sidebar.has(e.target).length === 0 || exit.has(e.target).length == 1) {
             $('.sidenav-black-overlay').removeClass('active');
             $('#sidenavWrapper').removeClass('nav-active');
+        }
     });
 
     // :: Dropdown Menu

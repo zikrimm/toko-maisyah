@@ -117,7 +117,7 @@
                   </a>
                 <a href="/product/{{ $product->slug }}">
                   <div style="height:180px;">
-                    <img style="height: 160px; width:100%; object-fit: cover" src="{{ asset('storage/'.$product->gambar_product) }}" alt="">
+                    <img style="height: 160px; width:100%; object-fit: contain" src="{{ asset('storage/'.$product->gambar_product) }}" alt="">
                   </div>
                   <span class="product-title">{{ $product->nama_product }}</span>
                   <p class="sale-price color-price-flash text-truncate">{{ $harga_product }}
@@ -163,7 +163,7 @@
                   <span class="badge badge-warning">FLASH SALE</span>
                   <a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a>
                   <a class="product-thumbnail d-block" href="/product/{{ $product->slug }}">
-                    <img style="height: 158px; object-fit:cover" src="{{ asset('storage/'. $product->gambar_product) }}" alt="">
+                    <img style="height: 158px; object-fit:contain" src="{{ asset('storage/'. $product->gambar_product) }}" alt="">
                   </a>
                 </div>
                 <div class="product-description">

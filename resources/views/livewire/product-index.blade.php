@@ -95,7 +95,7 @@
                       <span class="badge badge-success">{{ $product->info_product }}</span>
                       <a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a>
                       <a class="product-thumbnail d-block" href="/product/{{ $product->slug }}">
-                        <img style="height: 158px; object-fit:cover" src="{{ asset('storage/'. $product->gambar_product) }}" alt="">
+                        <img style="height: 158px; object-fit:contain" src="{{ asset('storage/'. $product->gambar_product) }}" alt="">
                       </a>
                     </div>
                     <div class="product-description">
@@ -152,7 +152,7 @@
                   <span class="badge badge-danger">PROMO</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a>
                   @endif
                   <a class="product-thumbnail d-block" href="/product/{{ $product->slug }}">
-                    <img class="mb-2" style="height: 158px; object-fit: cover" src="{{ asset('storage/'. $product->gambar_product) }}" alt=""></a><a class="product-title d-block" href="/product/{{ $product->slug }}">{{ $product->nama_product }}</a>
+                    <img class="mb-2" style="height: 158px; object-fit: contain" src="{{ asset('storage/'. $product->gambar_product) }}" alt=""></a><a class="product-title d-block" href="/product/{{ $product->slug }}">{{ $product->nama_product }}</a>
                   @if ($product->harga_coret_product)
                   <p class="sale-price text-truncate">{{ $harga_product }}
                     <span>{{ $harga_coret_product }}</span>

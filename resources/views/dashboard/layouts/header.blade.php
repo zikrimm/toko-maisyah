@@ -44,9 +44,15 @@
         </a>
         <div class="dropdown-menu dropdown-menu-user dropdown-menu-right">
           <a href="/dashboard/profile">
-            <button class="dropdown-item" style="border-bottom: 1px solid #4f5962;">
+            <button class="dropdown-item">
             <i class="fas fa-user mr-2"></i>
             Profile
+          </button>
+          </a>
+          <a href="/dashboard/password">
+            <button class="dropdown-item" style="border-bottom: 1px solid #4f5962;">
+            <i class="fas fa-key mr-2"></i>
+            Password
           </button>
           </a>
           <form action="/logout" method="post">

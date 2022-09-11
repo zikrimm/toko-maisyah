@@ -422,6 +422,15 @@ textarea:invalid {
         margin-left:8px;
     }
 
+    .lb-outerContainer{
+        height: 400px !important;
+    }
+
+    .lb-image{
+        height: 400px !important;
+        object-fit: cover;
+    }
+
     footer h5 {
         font-size: 18px !important;
     }
@@ -4499,11 +4508,11 @@ li.suha-dropdown-menu .dropdown-trigger-btn.active i {
 }
 [data-theme="dark"] .header-area {
     background-color: #111526;
-    box-shadow: 0 3px 12px rgba(255, 255, 255, 0.175);
+    box-shadow: 0 3px 12px rgba(255, 255, 255, 10%);
 }
 [data-theme="dark"] .footer-nav-area {
     background-color: #111526;
-    box-shadow: 0 -3px 12px rgba(255, 255, 255, 0.175);
+    box-shadow: 0 -3px 12px rgba(255, 255, 255, 10%);
 }
 [data-theme="dark"] .card {
     border-color: #242644;
@@ -5178,7 +5187,7 @@ a:not([href]):not([class]):hover {
 }
 
 .owl-box-shadow .owl-stage {
-    margin-bottom: 25px;
+    margin-bottom: 25px !important;
     overflow: visible;
 }
 

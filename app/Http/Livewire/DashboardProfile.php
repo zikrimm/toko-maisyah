@@ -120,10 +120,11 @@ class DashboardProfile extends Component
 
     public function update(){
         $messages = [
-            'min' => 'Harap memasukkan minimal 3 karakter!'
+            'required' => 'Nama lengkap wajib diisi.',
+            'min' => 'Harap memasukkan minimal 3 karakter.'
         ];
         $validator = $this->validate([
-            'name' => 'min:3',
+            'name' => 'required|min:3',
             'jenis_kelamin' => 'present',
             'tanggal_lahir' => 'present',
             'no_telp' => 'present',

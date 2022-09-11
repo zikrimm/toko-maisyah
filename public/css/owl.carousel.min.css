@@ -32,6 +32,12 @@
     overflow: hidden;
     -webkit-transform: translate3d(0, 0, 0);
 }
+
+.product-catagory-wrap .owl-stage-outer{
+    margin-bottom: 15px !important;
+    padding-bottom: 15px !important;
+}
+
 .owl-carousel .owl-item,
 .owl-carousel .owl-wrapper {
     -webkit-backface-visibility: hidden;

@@ -163,7 +163,7 @@
                   <span class="badge badge-warning">FLASH SALE</span>
                   <a class="wishlist-btn" href="#"></a>
                   <a href="/product/{{ $product->slug }}">
-                    <img style="object-fit: cover;  height: 110px;" src="{{ asset('storage/'.  $product->gambar_product) }}" alt="" />
+                    <img style="object-fit: contain;  height: 110px;" src="{{ asset('storage/'.  $product->gambar_product) }}" alt="" />
                   </a>
                 </div>
                   <div class="gambar_product_responsive">
@@ -223,7 +223,7 @@
                   <span class="badge badge-danger">PROMO</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a>
                   @endif
                   <a class="product-thumbnail d-block" href="/product/{{ $product->slug }}">
-                    <img class="mb-2 " style="height: 150px; object-fit: cover"  src="{{asset('storage/'. $product->gambar_product)}}" alt="" />
+                    <img class="mb-2 " style="height: 150px; object-fit: contain"  src="{{asset('storage/'. $product->gambar_product)}}" alt="" />
                   </a>
                   <a class="product-title d-block text-truncate" href="/product/{{ $product->slug }}">{{ $product->nama_product }}
                   </a>

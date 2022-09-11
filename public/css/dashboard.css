@@ -185,6 +185,17 @@ input[type="file"]::-webkit-file-upload-button{
   color: rgb(237, 233, 233);
 }
 
+.dropdown-menu i {
+  font-size: 12px;
+}
+
+.error-validation{
+  font-size: .875rem;
+  color: #DC2626;
+  margin-top: .5rem !important;
+  display: block;
+}
+
 @media screen and (min-width:1024px){
   .text-grey{
      font-size: .875rem;

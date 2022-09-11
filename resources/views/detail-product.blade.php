@@ -185,7 +185,7 @@
                   @endif
                   <!-- Thumbnail -->
                   <a class="product-thumbnail d-block" href="/product/{{ $product->slug }}">
-                    <img class="mb-2 " style="height: 150px; object-fit: cover"  src="{{asset('storage/'. $product->gambar_product)}}" alt="" />
+                    <img class="mb-2 " style="height: 150px; object-fit: contain"  src="{{asset('storage/'. $product->gambar_product)}}" alt="" />
                   </a>
                   <!-- Product Title -->
                   <a class="product-title d-block text-truncate" style="font-size:16px;" href="/product/{{ $product->slug }}">{{ $product->nama_product }}
@@ -284,6 +284,7 @@
   // Lightbox Setting
   lightbox.option({
       'maxHeight': 700,
+      'alwaysShowNavOnTouchDevices' : true
   });
   // Owl Setting
   if($.fn.owlCarousel){

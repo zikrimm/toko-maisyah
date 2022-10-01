@@ -122,7 +122,7 @@
             {{ $products->onEachSide(2)->links() }}
           </div>
           @else
-          <div wire:loading.class="loading-text">
+          <div wire:loading.class="loading-text mt-4">
             <h5 class="text-center" wire:loading.remove>Product tidak ditemukan</h5>
           </div>
           @endif
@@ -173,7 +173,7 @@
           {{ $products->onEachSide(2)->links() }}
         </div>
         @else
-        <div wire:loading.class="loading-text">
+        <div wire:loading.class="loading-text mt-4">
           <h5 class="text-center" wire:loading.remove >Product tidak ditemukan</h5>
         </div>
     @endif

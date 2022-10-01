@@ -425,7 +425,7 @@
             success: function(data){
                  $('#flashsale_id').val(data.Product[0].id);
                  $('#nama_product').val(data.Product[0].nama_product);
-                 $('#harga_product').val(data.Product[0].harga_product);
+                 $('#harga_coret_product').val(data.Product[0].harga_product);
             }
         })  
       });

@@ -202,6 +202,7 @@ class DashboardFlashsaleController extends Controller
                 $remove_flashsale_product = str_replace("-", "/", $request->flashsale);
                 $validatedData['flashsale'] = $remove_flashsale_product;
             }
+            $validatedData['harga_product'] = $remove_flashsale->harga_coret_product;
             $validatedData['sold_out'] = NULL;
             $validatedData['harga_coret_product'] = NULL;
             $validatedData['sold_out'] = NULL;
